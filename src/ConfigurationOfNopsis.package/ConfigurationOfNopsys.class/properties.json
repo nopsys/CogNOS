@@ -1,0 +1,14 @@
+{
+	"category" : "ConfigurationOfNopsis",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		"LastVersionLoad" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"project" ],
+	"name" : "ConfigurationOfNopsys",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
