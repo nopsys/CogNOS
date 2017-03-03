@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-VM-CMake",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "StackSpur32NopsysConfig",
+	"pools" : [
+		 ],
+	"super" : "StackNopsysConfig",
+	"type" : "normal" }

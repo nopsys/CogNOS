@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-VM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "gera 5/9/2006 13:47",
+	"instvars" : [
+		 ],
+	"name" : "SqueakNOSPlugin",
+	"pools" : [
+		 ],
+	"super" : "InterpreterPlugin",
+	"type" : "normal" }

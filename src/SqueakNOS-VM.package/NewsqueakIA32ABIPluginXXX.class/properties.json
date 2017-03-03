@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-VM",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "JavierPimas 2/17/2017 15:33",
+	"instvars" : [
+		"interpreterProxy" ],
+	"name" : "NewsqueakIA32ABIPluginXXX",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

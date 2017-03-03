@@ -1,0 +1,1 @@
+this should be put in the actual NewsqueakIA32Plugin after migration
