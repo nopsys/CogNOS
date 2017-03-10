@@ -1,0 +1,3 @@
+accessing
+reservedSectors
+	^self bootRecord reservedSectors

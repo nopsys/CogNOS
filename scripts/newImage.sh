@@ -32,6 +32,6 @@ bash 50+vm
 
 INFO "LOADING VM MAKER SOURCES INTO IMAGE"
 set -x
-./pharo Pharo.image "$IMAGE_DIR/../scripts/LoadSqueakNOS.st" "$IMAGE_DIR/../scripts/LoadVMMaker.st"
+./pharo Pharo.image "$IMAGE_DIR/../scripts/loadSqueakNOS.st"
 
 popd > /dev/null

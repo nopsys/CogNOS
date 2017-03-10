@@ -1,0 +1,3 @@
+clearing interrupts
+clearCommandCompleteInterrupt
+	self setInterruptStatusBit: 0

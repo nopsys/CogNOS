@@ -1,0 +1,3 @@
+command byte
+disableInterrupts
+	^self disableInputBufferFullInterrupt; disableMouseInputBufferFullInterrupt

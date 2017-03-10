@@ -1,0 +1,3 @@
+accesing
+pageTableEntrySize
+	^4

@@ -1,0 +1,3 @@
+accessing
+nextByte
+	^ receivedChars next

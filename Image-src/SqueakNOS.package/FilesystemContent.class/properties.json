@@ -1,0 +1,17 @@
+{
+	"category" : "SqueakNOS-Filesystems",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"name",
+		"identifier",
+		"filesystem",
+		"directory" ],
+	"name" : "FilesystemContent",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

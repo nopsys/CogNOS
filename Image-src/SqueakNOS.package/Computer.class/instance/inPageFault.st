@@ -1,0 +1,3 @@
+image
+inPageFault 
+	^info inPageFault

@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-Storage",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"fileSize",
+		"offset" ],
+	"name" : "CheapHardDiskStream",
+	"pools" : [
+		 ],
+	"super" : "StandardFileStream",
+	"type" : "normal" }

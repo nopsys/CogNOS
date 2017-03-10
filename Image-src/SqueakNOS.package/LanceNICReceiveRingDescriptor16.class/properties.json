@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Devices-Network",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "LanceNICReceiveRingDescriptor16",
+	"pools" : [
+		 ],
+	"super" : "LanceNICRingDescriptor16",
+	"type" : "normal" }

@@ -1,0 +1,3 @@
+private
+fatFinishClustersChainValue
+	^fat finishClustersChainValue

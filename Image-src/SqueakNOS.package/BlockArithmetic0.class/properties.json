@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Storage",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BlockArithmetic0",
+	"pools" : [
+		 ],
+	"super" : "BlockArithmetic",
+	"type" : "normal" }

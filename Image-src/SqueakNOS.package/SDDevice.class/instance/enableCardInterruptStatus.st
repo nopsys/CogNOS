@@ -1,0 +1,3 @@
+enabling interrupts
+enableCardInterruptStatus
+	self setInterruptStatusEnableBit: 8

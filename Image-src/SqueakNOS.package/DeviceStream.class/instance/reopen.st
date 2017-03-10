@@ -1,0 +1,3 @@
+accessing
+reopen
+	^ device reopen

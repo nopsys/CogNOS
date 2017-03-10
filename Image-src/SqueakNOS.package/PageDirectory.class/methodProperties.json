@@ -1,0 +1,13 @@
+{
+	"class" : {
+		"entriesCount:entrySize:pageTables:" : "GuidoChari 10/18/2010 17:08" },
+	"instance" : {
+		"deepCopy" : "GuidoChari 10/19/2010 18:05",
+		"free" : "GuidoChari 10/18/2010 16:54",
+		"initialize" : "GuidoChari 10/18/2010 17:47",
+		"pageTableAtIndex:" : "GuidoChari 10/19/2010 17:57",
+		"pageTables" : "GuidoChari 10/18/2010 16:58",
+		"pageTables:" : "GuidoChari 10/19/2010 16:38",
+		"printOn:" : "GuidoChari 10/18/2010 17:03",
+		"readOnly" : "gc 11/3/2010 12:08",
+		"readOnlyFrom:to:" : "gc 11/4/2010 18:24" } }

@@ -1,0 +1,3 @@
+accessing
+numberOfCopiesOfFAT
+	^self bootRecord numberOfCopiesOfFAT

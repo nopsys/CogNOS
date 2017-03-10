@@ -1,0 +1,3 @@
+accesing
+contents
+	^contents contents

@@ -1,0 +1,3 @@
+image
+totalPageFaults
+	^info totalPageFaults

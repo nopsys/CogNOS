@@ -1,0 +1,10 @@
+{
+	"class" : {
+		"installOn:" : "gc 7/21/2010 16:26" },
+	"instance" : {
+		"alreadyReserved:for:" : "gc 6/16/2010 19:10",
+		"biggestEmptyBlock" : "gc 6/19/2010 17:06",
+		"emptyBlocks" : "gc 6/19/2010 16:55",
+		"initialize" : "gc 6/16/2010 19:14",
+		"size" : "gc 6/17/2010 14:51",
+		"size:" : "JavierPimas 8/11/2010 16:05" } }

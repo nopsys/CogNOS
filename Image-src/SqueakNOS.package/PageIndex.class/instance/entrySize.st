@@ -1,0 +1,3 @@
+accessing
+entrySize
+	^entrySize

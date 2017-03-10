@@ -1,0 +1,11 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"defaultHandlingBlock" : "JavierPimas 8/23/2011 06:27",
+		"doDefaultHandlingFor:" : "JavierPimas 3/18/2011 10:16",
+		"handlingBlock" : "JavierPimas 3/17/2011 19:14",
+		"handlingBlock:" : "JavierPimas 3/17/2011 19:14",
+		"initialize" : "JavierPimas 3/17/2011 19:13",
+		"manager:" : "GuidoChari 10/22/2010 15:40",
+		"resolvePageFaultOn:" : "JavierPimas 3/18/2011 10:11" } }

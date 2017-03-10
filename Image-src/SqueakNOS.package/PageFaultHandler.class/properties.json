@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-Memory-Manager",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"manager",
+		"handlingBlock" ],
+	"name" : "PageFaultHandler",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

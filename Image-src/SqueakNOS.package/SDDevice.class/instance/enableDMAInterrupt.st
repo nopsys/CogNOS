@@ -1,0 +1,3 @@
+enabling interrupts
+enableDMAInterrupt
+	self setInterruptEnableBit: 3

@@ -1,0 +1,3 @@
+constants
+basenameMaxSize
+	^8

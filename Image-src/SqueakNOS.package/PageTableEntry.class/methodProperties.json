@@ -1,0 +1,21 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"clean" : "GuidoChari 10/14/2010 16:25",
+		"handle:" : "GuidoChari 10/18/2010 12:13",
+		"handledBy:" : "stamp:",
+		"isPresent" : "GuidoChari 10/22/2010 15:52",
+		"isPresentAndAllowed" : "GuidoChari 10/14/2010 16:26",
+		"isPresentAndForbidden" : "GuidoChari 10/25/2010 15:33",
+		"isReadOnly" : "GuidoChari 10/22/2010 15:53",
+		"notPresent" : "GuidoChari 2/3/2011 16:56",
+		"pageFrame:" : "GuidoChari 10/18/2010 12:14",
+		"pageTable" : "GuidoChari 10/19/2010 17:05",
+		"pointedAddress" : "GuidoChari 10/19/2010 17:07",
+		"presentAndWritableWord" : "GuidoChari 10/19/2010 16:36",
+		"printOn:" : "GuidoChari 10/19/2010 17:06",
+		"readOnly" : "gc 11/4/2010 14:51",
+		"readWrite" : "GuidoChari 12/28/2010 15:52",
+		"setPresentAndWritable" : "GuidoChari 10/19/2010 16:36",
+		"status" : "GuidoChari 10/25/2010 14:58" } }

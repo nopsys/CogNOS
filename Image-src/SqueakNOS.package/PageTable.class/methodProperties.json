@@ -1,0 +1,11 @@
+{
+	"class" : {
+		"fromTable:" : "GuidoChari 10/19/2010 18:03",
+		"fromTable:size:" : "GuidoChari 10/18/2010 11:17" },
+	"instance" : {
+		"deepCopy" : "GuidoChari 10/25/2010 14:55",
+		"identityMappingStartingAt:pageSize:" : "GuidoChari 10/19/2010 16:37",
+		"isPresentAndAllowed:" : "GuidoChari 10/19/2010 18:12",
+		"phisicalAddressFor:" : "GuidoChari 10/19/2010 18:11",
+		"printOn:" : "GuidoChari 10/18/2010 12:18",
+		"readOnly" : "gc 11/3/2010 12:09" } }

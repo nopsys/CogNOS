@@ -1,0 +1,3 @@
+enabling interrupts
+enableTransferCompleteInterrupt
+	self setInterruptEnableBit: 1

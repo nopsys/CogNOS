@@ -1,0 +1,3 @@
+accessing
+leftShiftDown
+	^ self leftShiftPressed

@@ -1,0 +1,3 @@
+testing
+dataAvailable
+	^ device dataAvailable

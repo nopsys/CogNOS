@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-OFW-OLPC",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "<historical>",
+	"instvars" : [
+		 ],
+	"name" : "OpenFirmwareCalloutClient",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

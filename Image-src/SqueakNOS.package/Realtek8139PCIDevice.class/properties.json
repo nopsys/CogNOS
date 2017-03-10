@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Devices-Network",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "gera 7/20/2006 18:48",
+	"instvars" : [
+		"nextTxIndex" ],
+	"name" : "Realtek8139PCIDevice",
+	"pools" : [
+		 ],
+	"super" : "NetworkingDevice",
+	"type" : "normal" }

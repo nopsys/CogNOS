@@ -1,0 +1,20 @@
+{
+	"category" : "SqueakNOS-Kernel",
+	"classinstvars" : [
+		"snapshotter" ],
+	"classvars" : [
+		"Current",
+		"PageFaultHandler",
+		"Saving" ],
+	"commentStamp" : "",
+	"instvars" : [
+		"devices",
+		"info",
+		"processor",
+		"memoryManager",
+		"primaryFilesystem" ],
+	"name" : "Computer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

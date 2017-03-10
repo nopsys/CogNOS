@@ -1,0 +1,18 @@
+{
+	"class" : {
+		"on:" : "Pocho 3/27/2010 17:41" },
+	"instance" : {
+		"device:" : "gc 7/16/2010 15:41",
+		"fileSize" : "Pocho 3/28/2010 03:45",
+		"fileSize:" : "Pocho 3/28/2010 03:45",
+		"primAtEnd:" : "richie 8/31/2009 16:53",
+		"primClose:" : "richie 8/31/2009 16:15",
+		"primCloseNoError:" : "richie 8/31/2009 16:15",
+		"primFlush:" : "Pocho 7/20/2010 16:17",
+		"primGetPosition:" : "gc 7/16/2010 15:32",
+		"primRead:into:startingAt:count:" : "JavierPimas 8/12/2010 18:15",
+		"primSetPosition:to:" : "gc 7/16/2010 15:31",
+		"primSize:" : "gc 7/16/2010 15:31",
+		"primSizeNoError:" : "richie 8/31/2009 16:55",
+		"primTruncate:to:" : "richie 8/31/2009 16:14",
+		"primWrite:from:startingAt:count:" : "gc 7/16/2010 15:54" } }

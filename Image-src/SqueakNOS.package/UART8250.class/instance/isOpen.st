@@ -1,0 +1,3 @@
+device protocol
+isOpen
+	^ true

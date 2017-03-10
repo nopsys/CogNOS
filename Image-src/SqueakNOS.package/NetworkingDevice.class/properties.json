@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Devices-Network",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "NetworkingDevice",
+	"pools" : [
+		 ],
+	"super" : "PCIDevice",
+	"type" : "normal" }

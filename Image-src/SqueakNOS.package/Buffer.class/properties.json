@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-External-Structures",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"pointer",
+		"size" ],
+	"name" : "Buffer",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

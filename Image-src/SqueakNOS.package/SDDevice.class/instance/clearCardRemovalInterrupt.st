@@ -1,0 +1,3 @@
+clearing interrupts
+clearCardRemovalInterrupt
+	self setInterruptStatusBit: 7

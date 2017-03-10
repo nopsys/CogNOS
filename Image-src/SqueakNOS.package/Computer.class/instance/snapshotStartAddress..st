@@ -1,0 +1,3 @@
+snapshotting
+snapshotStartAddress: anInteger
+	info snapshotStartAddress: anInteger

@@ -1,0 +1,3 @@
+accessing
+pageFaultAddress 
+	^info pageFaultAddress

@@ -1,0 +1,3 @@
+enabling interrupts
+enableBlockGapInterrupt
+	self setInterruptEnableBit: 2

@@ -1,0 +1,24 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"createTempFile:from:do:" : "Pocho 7/5/2010 19:14",
+		"exampleFAT32FileNamed:" : "gc 7/14/2010 17:39",
+		"fat32ChangesStream" : "gc 7/14/2010 17:39",
+		"newInstance" : "JavierPimas 1/4/2011 14:33",
+		"standardChangesStream" : "GuidoChari 3/24/2011 14:11",
+		"testBootRecord" : "GuidoChari 3/22/2011 16:37",
+		"testCompareToStandardFileStream" : "Pocho 7/5/2010 17:40",
+		"testCreation" : "gc 6/28/2010 17:57",
+		"testDeepDirectory" : "GC 5/4/2010 18:14",
+		"testEmptyFile" : "gc 6/28/2010 17:57",
+		"testLargeFileAppend" : "Pocho 7/5/2010 20:40",
+		"testLargeFileCopy" : "Pocho 7/5/2010 20:39",
+		"testLargeFileRead" : "Pocho 7/5/2010 18:38",
+		"testLargeFileWrite" : "Pocho 7/13/2010 15:31",
+		"testMethodSources" : "Pocho 7/13/2010 15:31",
+		"testNewAndRemoveFile" : "gc 6/24/2010 13:02",
+		"testRoot" : "GC 4/21/2010 16:26",
+		"testSmallFileRead" : "gc 6/28/2010 17:57",
+		"testSmallFileWrite" : "gc 6/28/2010 17:56",
+		"testWriteAtEndOfChanges" : "Pocho 7/13/2010 16:21" } }

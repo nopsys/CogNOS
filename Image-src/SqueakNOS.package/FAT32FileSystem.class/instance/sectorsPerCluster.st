@@ -1,0 +1,3 @@
+accessing
+sectorsPerCluster
+	^self bootRecord sectorsPerCluster

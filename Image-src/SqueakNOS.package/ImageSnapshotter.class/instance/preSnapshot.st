@@ -1,0 +1,4 @@
+internal
+preSnapshot
+	"self prepareForClonedSnapshot"
+	

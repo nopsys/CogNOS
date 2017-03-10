@@ -1,0 +1,3 @@
+internal
+size
+	^computer snapshotEndAddress 

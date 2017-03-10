@@ -1,0 +1,15 @@
+{
+	"class" : {
+		"new" : "gera 5/20/2006 01:54",
+		"onIRQ:" : "gera 5/20/2006 01:54" },
+	"instance" : {
+		"addHandler:" : "gera 5/20/2006 00:41",
+		"handleOn:" : "r++ 7/24/2008 23:09",
+		"initialize" : "gera 5/20/2006 00:34",
+		"installOn:" : "gera 8/24/2008 18:47",
+		"interruptNumber" : "gera 6/1/2006 21:24",
+		"primRegisterSemaphoreIndex:forIRQ:" : "gera 5/20/2006 00:33",
+		"privInterruptNumber:" : "gera 5/20/2006 00:30",
+		"registerSemaphore" : "gera 5/20/2006 00:32",
+		"removeHandler:" : "gera 6/5/2006 19:35",
+		"uninstall" : "gera 6/9/2006 23:57" } }

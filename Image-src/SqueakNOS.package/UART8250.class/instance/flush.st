@@ -1,0 +1,3 @@
+device protocol
+flush
+	^ self

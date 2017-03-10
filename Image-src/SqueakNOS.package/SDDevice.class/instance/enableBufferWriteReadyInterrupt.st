@@ -1,0 +1,3 @@
+enabling interrupts
+enableBufferWriteReadyInterrupt
+	self setInterruptEnableBit: 4

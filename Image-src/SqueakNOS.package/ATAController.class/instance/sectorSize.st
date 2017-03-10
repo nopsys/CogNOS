@@ -1,0 +1,3 @@
+registers
+sectorSize
+	^512

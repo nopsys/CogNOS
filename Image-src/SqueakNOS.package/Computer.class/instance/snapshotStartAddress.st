@@ -1,0 +1,3 @@
+snapshotting
+snapshotStartAddress
+	^info snapshotStartAddress

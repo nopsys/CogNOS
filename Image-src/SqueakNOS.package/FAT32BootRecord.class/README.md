@@ -1,0 +1,1 @@
+A FAT32BootRecord contains the description of a fat32 partition.

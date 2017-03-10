@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-FileSupport",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "ParagraphEditorWithBindings",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

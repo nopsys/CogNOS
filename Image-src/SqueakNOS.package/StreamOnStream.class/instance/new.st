@@ -1,0 +1,3 @@
+methodsFor:
+new
+	^self basicNew

@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-Devices-Storage",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"results",
+		"controller" ],
+	"name" : "ATABenchmarker",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

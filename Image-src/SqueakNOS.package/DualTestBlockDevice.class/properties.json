@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-Storage",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"deviceA",
+		"deviceB" ],
+	"name" : "DualTestBlockDevice",
+	"pools" : [
+		 ],
+	"super" : "BlockDevice",
+	"type" : "normal" }

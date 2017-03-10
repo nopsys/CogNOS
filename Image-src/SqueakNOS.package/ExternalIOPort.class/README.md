@@ -1,0 +1,1 @@
+This is 1 based to match ExternalAddress accessors, this adds a double stupid overhead on every accessors. Read comment for HardwareDevice class

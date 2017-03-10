@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Kernel",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "gera 7/22/2006 13:51",
+	"instvars" : [
+		"address" ],
+	"name" : "ExternalIOPort",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

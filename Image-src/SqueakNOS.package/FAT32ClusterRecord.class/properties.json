@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Filesystems-FAT32",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"contents" ],
+	"name" : "FAT32ClusterRecord",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }

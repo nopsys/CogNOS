@@ -1,0 +1,17 @@
+{
+	"category" : "SqueakNOS-Devices-Base",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"computer",
+		"slave",
+		"dispatchers",
+		"savedMask" ],
+	"name" : "PIC8259",
+	"pools" : [
+		 ],
+	"super" : "HardwareDevice",
+	"type" : "normal" }

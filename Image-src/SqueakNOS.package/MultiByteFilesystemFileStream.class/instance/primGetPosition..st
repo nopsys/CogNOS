@@ -1,0 +1,3 @@
+private
+primGetPosition: id
+	^offset

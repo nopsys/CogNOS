@@ -1,0 +1,14 @@
+{
+	"category" : "SqueakNOS-Devices-Base",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "PCIDevice",
+	"pools" : [
+		 ],
+	"super" : "HardwareDevice",
+	"type" : "normal" }

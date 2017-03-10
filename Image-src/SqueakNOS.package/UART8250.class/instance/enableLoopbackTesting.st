@@ -1,0 +1,3 @@
+accessing
+enableLoopbackTesting
+	self modemControlRegister: 16r10

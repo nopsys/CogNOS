@@ -1,0 +1,3 @@
+constants
+extensionMaxSize
+	^3

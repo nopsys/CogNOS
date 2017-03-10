@@ -1,0 +1,3 @@
+testing interrupts
+hasBufferWriteReadyInterrupt
+	^self testInterruptStatusBit: 4

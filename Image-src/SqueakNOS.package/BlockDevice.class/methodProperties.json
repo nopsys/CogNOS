@@ -1,0 +1,20 @@
+{
+	"class" : {
+		 },
+	"instance" : {
+		"at:" : "Pocho 3/27/2010 14:10",
+		"at:write:" : "Pocho 3/27/2010 14:10",
+		"at:writeArray:" : "Pocho 3/27/2010 14:10",
+		"blockNumberFromByteOffset:" : "Pocho 4/2/2010 01:17",
+		"blockSize" : "Pocho 3/27/2010 14:24",
+		"disableCache" : "Pocho 7/21/2010 16:37",
+		"enableCache" : "Pocho 7/21/2010 16:37",
+		"flush" : "Pocho 7/20/2010 16:17",
+		"from:to:" : "Pocho 4/2/2010 01:04",
+		"fromByte:bytesCount:" : "Pocho 3/27/2010 17:49",
+		"fromByte:toByte:" : "Pocho 3/27/2010 18:01",
+		"initialize" : "GuidoChari 11/1/2010 14:47",
+		"oldreplaceFromByte:bytesCount:with:startingAtByte:" : "Pocho 7/16/2010 20:01",
+		"positionInBlockOf:" : "Pocho 3/27/2010 17:57",
+		"readInto:startWritingAtByte:startReadingAtByte:bytesCount:" : "Pocho 7/16/2010 17:31",
+		"replaceFromByte:bytesCount:with:startingAtByte:" : "Pocho 7/16/2010 20:02" } }

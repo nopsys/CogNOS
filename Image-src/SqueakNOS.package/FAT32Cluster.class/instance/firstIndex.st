@@ -1,0 +1,3 @@
+private
+firstIndex
+	^1

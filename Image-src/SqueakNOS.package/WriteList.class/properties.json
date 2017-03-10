@@ -1,0 +1,15 @@
+{
+	"category" : "SqueakNOS-Storage",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		"writeQueue",
+		"blocksList" ],
+	"name" : "WriteList",
+	"pools" : [
+		 ],
+	"super" : "Object",
+	"type" : "normal" }
