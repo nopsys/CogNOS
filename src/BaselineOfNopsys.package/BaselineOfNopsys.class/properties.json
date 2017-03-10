@@ -1,0 +1,14 @@
+{
+	"category" : "BaselineOfNopsys",
+	"classinstvars" : [
+		 ],
+	"classvars" : [
+		 ],
+	"commentStamp" : "",
+	"instvars" : [
+		 ],
+	"name" : "BaselineOfNopsys",
+	"pools" : [
+		 ],
+	"super" : "BaselineOf",
+	"type" : "normal" }
