@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
-base checkoutVMMaker.sh
+bash checkoutVMMaker.sh
 bash newImage.sh
 

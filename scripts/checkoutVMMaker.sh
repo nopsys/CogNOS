@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -ex
+set -e
 
 SCRIPT_PATH=`dirname $0`;
 source $SCRIPT_PATH/basicFunctions.inc

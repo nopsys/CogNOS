@@ -2,7 +2,7 @@
 
 #Based on the same file from pharo-vm project
 
-set -ex
+set -e
 
 SCRIPT_PATH=`dirname $0`;
 source $SCRIPT_PATH/basicFunctions.inc
