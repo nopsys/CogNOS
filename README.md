@@ -7,10 +7,7 @@ At a first stage, [Gerardo Richarte](...) (Richie) and [Luciano Notarfrancesco](
 and build the basis. Most of the code contained in this repository was developed by them. 
 The sources of that stage of the project can be found at: https://sourceforge.net/projects/squeaknos/.
 
-In a second stage, during 2011-2012, [Javier Pimás]() and [Guido Chari](), in collaboration with Richie revived the project, 
-made it compatible with Pharo Smalltalk and add Filesystem (FAT32) and Memory Management (Paging) support.
-This made it possible to snapshot images, an important milestone of the project. There is a blog with some documentation,
-the news of those days, and instructions to download prebuilt images: http://squeaknos.blogspot.com.ar/.
+In a second stage, during 2011-2012, [Javier Pimás](https://github.com/melkyades) and [Guido Chari](https://github.com/charig), in collaboration with Richie revived the project, made it compatible with Pharo Smalltalk and add Filesystem (FAT32) and Memory Management (Paging) support. This made it possible to snapshot images, an important milestone of the project. There is a blog with some documentation, the news of those days, and instructions to download prebuilt images: http://squeaknos.blogspot.com.ar/.
 
 Now, we are working in a second revival! Smalltalk VMs (and also the images) have changed a lot since the old times. 
 We have decided to give a new name to the project: Nopsys (No Operating System). The reason is that we do not want the 
@@ -40,8 +37,5 @@ To build the project:
     git clone https://github.com/charig/Nopsys.git
 
 
-
-
-
-
 # How to collaborate
+We will create issues, here in github, with different degrees of complexity...
