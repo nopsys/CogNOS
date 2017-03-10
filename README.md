@@ -14,6 +14,11 @@ We have decided to give a new name to the project: Nopsys (No Operating System).
 project to be tightly coupled to any particular Smalltalk dialect. Besides, although we are developing the project in 
 Smalltalk, and we considered ourselves Smalltalkers, actually the fundamental ideas are language-agnostic. 
 
+## Publications
+We are working on them. Nothing serious yet :). Hope to have news soon.
+
+# Documentation
+
 # Goals for this new version of Nopsys
 - [ ] Make Nopsys work with the new family of Open-Smalltalk VMs (Stack, Cog, Spur) and with the up to date images 
 (Pharo, Squeak, Cuis). 
