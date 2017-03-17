@@ -22,16 +22,20 @@ if [ $OS == "CYGWIN" ]; then
 	SCRIPT_PATH="."
 fi
 
-# PREPARE VM MAKER IMAGE ===================================================
 pushd $IMAGE_DIR > /dev/null
 
-INFO Downloading Stable Pharo image and VM from get.pharo.org
 get_web_getter
-$GET get.pharo.org/50+vm
-bash 50+vm
-
-INFO "LOADING VM MAKER SOURCES INTO IMAGE"
-set -x
-./pharo Pharo.image "$IMAGE_DIR/../scripts/loadSqueakNOS.st"
+if [ ! -f Pharo.image ]
+  then
+  INFO Downloading Stable Pharo image from get.pharo.org
+  $GET get.pharo.org/50
+  bash 50
+fi
+if [ ! -f pharo ]
+  then
+  INFO Downloading Stable Pharo VM from get.pharo.org
+  $GET get.pharo.org/vm50
+  bash vm50
+fi
 
 popd > /dev/null
