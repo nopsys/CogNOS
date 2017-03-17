@@ -36,10 +36,15 @@ Obtaining, Building and Running Nopsys
 To checkout the code:
 
     git clone https://github.com/charig/Nopsys.git
+    git submodule update --init --recursive
     
+To setup all the dependencies, both for building and development:
+
+    bash scripts/setupRepo.sh
+   
 To build the project:
 
-    git clone https://github.com/charig/Nopsys.git
+    ...
 
 
 # How to collaborate
