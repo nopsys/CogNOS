@@ -1,4 +1,4 @@
 [submodule "opensmalltalk-vm"]
 	path = opensmalltalk-vm
-	url = https://github.com/charig/opensmalltalk-vm
+	url = https://github.com/nopsys/opensmalltalk-vm
 	shallow = true
