@@ -3,7 +3,7 @@
 Author useAuthor: 'LoadVMMaker' during: [ 
 	Metacello new
         baseline: #Nopsys;
-        repository: 'github://charig/nopsys/VM-src';
+        repository: 'github://nopsys/CogNOS/VM-src';
         load ].
 
 (Smalltalk saveAs: 'generator') 

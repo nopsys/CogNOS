@@ -3,7 +3,7 @@
 Author useAuthor: 'LoadSqueaNOS' during: [ 
 	Metacello new
         baseline: #SqueakNOS;
-        repository: 'github://charig/nopsys/Image-src';
+        repository: 'github://nopsys/CogNOS/Image-src';
         load ].
 
 (Smalltalk saveAs: 'SqueakNOS') 
