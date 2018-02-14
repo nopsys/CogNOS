@@ -9,6 +9,10 @@ repository. Unluckily, Nopsys depends on the open-smalltalk VMs, which have a ve
 We would like to still work on improving the whole building process. By the moment, we provide a bunch of scripts 
 for automatically generating all the needed artifacts. 
 
+Remember that for now nopsys only supports 32-bit OS 
+(if you want to help for a 64-bit migration just tell), so you have to install
+32-bit versions of libs in your system. 
+
 To checkout the code:
 
     git clone https://github.com/nopsys/CogNOS.git
@@ -17,18 +21,25 @@ To checkout the code:
 To setup all the dependencies, both for building and development:
 
     bash scripts/setupRepo.sh
-   
-To build the project:
-
-    ...
     
-### Compiling Pharo VM
+Install dependencies:
 
-This step is not necessary at all, but might be a good excercise before building Cog/nopsys. To build it you have to install some dependencies. Remember that for now nopsys only supports 32-bit OS (if you want to help for a 64-bit migration just tell), so you have to install 32-bit versions of libs in your system.
+    sudo apt install gcc-multilib libc6-dev:i386 libasound2:i386 libasound2-dev:i386 libssl-dev:i386 libssl0.9.8:i386  libx11-dev:i386 libsm-dev:i386 libice-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev:i386 libxext-dev:i386 libglapi-mesa:i386 uuid-dev:i386 libcurl3-dev:i386
 
 *IMPORTANT*: These instructions were tested using Ubuntu 17.04/64-bits. We want to maintain them always up-to-date, so please inform if anything is not working, or if you are required to change something to make it work in other OSes. 
 
-    $> sudo apt install gcc-multilib libc6-dev:i386 libasound2:i386 libasound2-dev:i386 libssl-dev:i386 libssl0.9.8:i386  libx11-dev:i386 libsm-dev:i386 libice-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev:i386 libxext-dev:i386 libglapi-mesa:i386 uuid-dev:i386 libcurl3-dev:i386
+To finally build and run:
+
+    cd opensmalltalk-vm/platforms/nopsys
+    make  # builds vm.obj
+    make iso # builds libnopsys.lib and links it to vm.obj
+    make run # runs it using bochs, you also have the virtualBox target
+
+    
+### Compiling Pharo VM
+
+This step is not necessary at all, but might be a good excercise before building Cog/nopsys. To build the Pharo VM you have to install some dependencies. 
+
     $> cd CogNOS/opensmalltalk-vm
     $> mkdir sources && cd sources
     $> curl http://files.pharo.org/sources/PharoV50.sources.zip > PharoV50.sources.zip && unzip PharoV50.sources.zip
