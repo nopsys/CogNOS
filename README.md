@@ -28,12 +28,25 @@ Install dependencies:
 
 *IMPORTANT*: These instructions were tested using Ubuntu 17.04/64-bits. We want to maintain them always up-to-date, so please inform if anything is not working, or if you are required to change something to make it work in other OSes. 
 
-To finally build and run:
+To build it:
 
     cd opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
     make iso # builds libnopsys.lib and links it to vm.obj
-    make run # runs it using bochs, you also have the virtualBox target
+
+And finally to try it, we support _all_ main system vms available: qemu, VirtualBox, 
+VMWare and Bochs. You can even run the image with an attached gdb (through qemu)
+
+    make try-qemu    # runs it using qemu
+    make try-qemudbg # runs it using qemu attaching a gdb to debug remotely and with symbols!!!
+    make try-bochs   # runs it using bochs
+    make try-vbox    # runs it using VirtualBox
+    make try-vmware  # runs it using WMWare player
+
+
+Currently I (pocho) suggest using qemu, it is fast, open and lightweight. Installs with:
+
+    sudo apt install qemu
 
     
 ### Compiling Pharo VM
