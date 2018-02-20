@@ -22,9 +22,14 @@ To setup all the dependencies, both for building and development:
 
     bash scripts/setupRepo.sh
     
-Install dependencies:
+Install dependencies (for making a bootable iso):
 
-    sudo apt install gcc-multilib libc6-dev:i386 libasound2:i386 libasound2-dev:i386 libssl-dev:i386 libssl0.9.8:i386  libx11-dev:i386 libsm-dev:i386 libice-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev:i386 libxext-dev:i386 libglapi-mesa:i386 uuid-dev:i386 libcurl3-dev:i386
+    sudo apt install grub-pc-bin xorriso
+
+
+To cross-compile to 32 bits we used to install (shouldn't be needed anymore):
+ 
+	sudo apt install gcc-multilib libc6-dev:i386 libasound2:i386 libasound2-dev:i386 libssl-dev:i386 libssl0.9.8:i386  libx11-dev:i386 libsm-dev:i386 libice-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev:i386 libxext-dev:i386 libglapi-mesa:i386 uuid-dev:i386 libcurl3-dev:i386
 
 *IMPORTANT*: These instructions were tested using Ubuntu 17.04/64-bits. We want to maintain them always up-to-date, so please inform if anything is not working, or if you are required to change something to make it work in other OSes. 
 
