@@ -18,9 +18,10 @@ Finally, *PREFIX* defines where to install the new compilation toolchain and *PA
 ## Generate binutils for Nopsys
  * Download [binutils](https://www.gnu.org/software/binutils/) sources. Make sure to clone or download a release version.
 
-Then inside the binutils directory: 
+You should create an independent build directory outside the binutils sources directory. Then run: 
 
-    ../configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror
+    cd buildDir
+    ../binutils-version/configure --target=$TARGET --prefix="$PREFIX" --with-sysroot --disable-nls --disable-werror
     make
     make install
 
@@ -33,9 +34,10 @@ Then inside the binutils directory:
 
  * Download [gcc](https://www.gnu.org/software/gcc/mirrors.html) sources. Make sure to download a release version similar to the current gcc that is installed in your OS to ensure that your native gcc can compile the new gcc.
  
- Then inside the gcc sources directory run:
+Again you should create an independent build directory outside the gcc sources directory. Then run: 
  
-    ./configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
+    cd buildDir
+    ./gcc-version/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
     make all-gcc
     make all-target-libgcc (Is this actually needed?)
     make install-gcc
