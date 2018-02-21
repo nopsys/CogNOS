@@ -37,7 +37,7 @@ You should create an independent build directory outside the binutils sources di
 Again you should create an independent build directory outside the gcc sources directory. Then run: 
  
     cd buildDir
-    ./gcc-version/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
+    ../gcc-version/configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
     make all-gcc
     make all-target-libgcc (Is this actually needed?)
     make install-gcc
