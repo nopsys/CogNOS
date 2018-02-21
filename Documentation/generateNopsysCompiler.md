@@ -37,7 +37,7 @@ Then inside the binutils directory:
  
     ./configure --target=$TARGET --prefix="$PREFIX" --disable-nls --enable-languages=c,c++ --without-headers
     make all-gcc
-    make all-target-libgcc
+    make all-target-libgcc (Is this actually needed?)
     make install-gcc
     make install-target-libgcc
     
