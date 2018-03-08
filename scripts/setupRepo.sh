@@ -22,8 +22,9 @@ then
     pushd $THIRD_PARTY_DIR
     # We should probably checkout a release version
     INFO "Checking out last version of openlibm"
-    git clone https://github.com/JuliaLang/openlibm.git openlibm
+    git clone https://github.com/nopsys/openlibm.git openlibm
     popd > /dev/null
+    OK "Openlibm ok"
 fi
 
 
