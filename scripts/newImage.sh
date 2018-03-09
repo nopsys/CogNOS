@@ -28,14 +28,14 @@ get_web_getter
 if [ ! -f Pharo.image ]
   then
   INFO Downloading Stable Pharo image from get.pharo.org
-  $GET get.pharo.org/50
-  bash 50
+  $GET get.pharo.org/64/61
+  bash 61
 fi
 if [ ! -f pharo ]
   then
   INFO Downloading Stable Pharo VM from get.pharo.org
-  $GET get.pharo.org/vm50
-  bash vm50
+  $GET get.pharo.org/64/vm61
+  bash vm61
 fi
 
 popd > /dev/null
