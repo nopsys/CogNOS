@@ -13,8 +13,9 @@ The instructions to build a cross-compiler were taken mainly from the [OSdev wik
 
 Finally, *PREFIX* defines where to install the new compilation toolchain and *PATH* adds the new toolchain to the path environment variable.
 
-## Prepare the Environemnt
+#### Dependencies
 Consider running the following commands to ensure all the most important dependencies are already installed:
+    
     brew install gmp
     brew install mpfr
     brew install libmpc
