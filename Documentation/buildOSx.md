@@ -17,7 +17,7 @@ Required packages:
 #### GRUB
     
     export PREFIX="$HOME/opt/"
-    export TARGET=x86_64-pc-elf
+    export TARGET=x86_64-elf
     export PATH="$PREFIX/bin:$PATH"
     git clone --depth 1 git://git.savannah.gnu.org/grub.git
     sh autogen.sh
