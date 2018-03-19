@@ -6,4 +6,23 @@ Since ELF is the official output for UNIX systems, compiling Nopsys from any oth
 
 Any cross-compilation setting should work after informing the relevant variables of the Makefile (declared in the Makefile.tools file).
 
-For compiling from Mac OSx we are using a prebuilt gcc found [here](http://crossgcc.rts-software.org/doku.php?id=compiling_for_linux): 
+For compiling from Mac OSx we are using a prebuilt gcc found [here](http://crossgcc.rts-software.org/doku.php?id=compiling_for_linux)
+
+## Dependencies
+
+Required packages:     
+    
+    brew install nasm gmp mpfr libmpc autoconf automake xorriso
+
+#### GRUB
+    
+    export PREFIX="$HOME/opt/"
+    export TARGET=x86_64-elf
+    export PATH="$PREFIX/bin:$PATH"
+    git clone --depth 1 git://git.savannah.gnu.org/grub.git
+    sh autogen.sh
+    cd build-grub
+    ../configure --disable-werror TARGET_CC=$TARGET-gcc TARGET_OBJCOPY=$TARGET-objcopy \
+    TARGET_STRIP=$TARGET-strip TARGET_NM=$TARGET-nm TARGET_RANLIB=$TARGET-ranlib --target=$TARGET --prefix=$PREFIX
+    make
+    make install

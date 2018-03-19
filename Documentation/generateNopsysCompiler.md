@@ -11,9 +11,14 @@ The instructions to build a cross-compiler were taken mainly from the [OSdev wik
 * For generating a toolchain for compiling 32 bits nopsys OSes select: TARGET=i686-elf
 * For generating a toolchain for compiling 64 bits nopsys OSes select: TARGET=x86_64-elf
 
-Finally, *PREFIX* defines where to install the new compilation toolchain and *PATH* adds the new toolchain to the path environment variable. 
+Finally, *PREFIX* defines where to install the new compilation toolchain and *PATH* adds the new toolchain to the path environment variable.
 
-
+#### Dependencies
+Consider running the following commands to ensure all the most important dependencies are already installed:
+    
+    brew install gmp
+    brew install mpfr
+    brew install libmpc
 
 ## Generate binutils for Nopsys
  * Download [binutils](https://www.gnu.org/software/binutils/) sources. Make sure to clone or download a release version.
@@ -32,7 +37,7 @@ You should create an independent build directory outside the binutils sources di
 
 ## Generate gcc for Nopsys
 
- * Download [gcc](https://www.gnu.org/software/gcc/mirrors.html) sources. Make sure to download a release version similar to the current gcc that is installed in your OS to ensure that your native gcc can compile the new gcc.
+ * Download [gcc](https://www.gnu.org/software/gcc/mirrors.html) sources. Make sure to download a release version similar to the current gcc/clang that is installed in your OS to ensure that your native compiler can compile the new gcc.
  
 Again you should create an independent build directory outside the gcc sources directory. Then run: 
  
