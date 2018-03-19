@@ -2,6 +2,8 @@
 
 #Based on the same file from pharo-vm project
 
+VM=vmTLatest70
+
 set -e
 
 SCRIPT_PATH=`dirname $0`;
@@ -34,8 +36,8 @@ fi
 if [ ! -f pharo ]
   then
   INFO Downloading Stable Pharo VM from get.pharo.org
-  $GET get.pharo.org/64/vm61
-  bash vm61
+  $GET get.pharo.org/64/$VM
+  bash $VM
 fi
 
 popd > /dev/null
