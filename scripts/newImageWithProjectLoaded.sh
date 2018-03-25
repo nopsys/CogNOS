@@ -14,15 +14,15 @@ fi
 
 pushd $IMAGE_DIR > /dev/null
 
-INFO "LOADING VM MAKER SOURCES INTO IMAGE"
 
-if [ ! -f Pharo.image ]
+if [ ! -f $IMAGE_DIR/Pharo.image ]
   then
   pushd $SCRIPT_PATH
   ./newImage.sh
   popd > /dev/null
 fi
 
+INFO "LOADING VM MAKER SOURCES INTO IMAGE"
 set -x
 ./pharo Pharo.image "$IMAGE_DIR/../scripts/$1"
 
