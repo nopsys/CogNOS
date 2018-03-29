@@ -63,8 +63,7 @@ So, if you are working with some very low-level features, found low-level bugs o
 
 Under the [image](https://github.com/nopsys/opensmalltalk-vm/tree/Cog/image) folder you will find an image that already have everything necessary to generate the sources for both the VM itself and all the plugins. To generate the code just open a browser and run:
 
-    VMMaker generateSqueakNOS64VM "This generates the code for the opensmalltalk-vm"
-
+    VMMaker generateSqueakNOS64VM "This generates the code for the opensmalltalk-vm"
     VMMaker generateVMPlugins "This generates the code for all the plugins including SqueakNOSPlugin"
 
 The image should contain the last released version of the SqueakNOSPlugin. In case you want to update to the latest development version you can do that using the monticello browser.
