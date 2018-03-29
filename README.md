@@ -9,29 +9,23 @@ repository. Unluckily, Nopsys depends on the open-smalltalk VMs, which have a ve
 We would like to still work on improving the whole building process. By the moment, we provide a bunch of scripts 
 for automatically generating all the needed artifacts. 
 
-Remember that for now nopsys only supports 32-bit OS 
-(if you want to help for a 64-bit migration just tell), so you have to install
-32-bit versions of libs in your system. 
+For now nopsys only supports 64-bit OS. 
 
 To checkout the code:
 
     git clone https://github.com/nopsys/CogNOS.git
     git submodule update --init --recursive
     
-To setup all the dependencies, both for building and development:
+To setup the repo both, for building and development:
 
     bash scripts/setupRepo.sh
     
 Install dependencies (for making a bootable iso):
 
     sudo apt install grub-pc-bin xorriso
+    
+[Click here](Documentation/buildOSx.md) for dependency instructions in OSx      
 
-
-To cross-compile to 32 bits we used to install (shouldn't be needed anymore):
- 
-	sudo apt install gcc-multilib libc6-dev:i386 libasound2:i386 libasound2-dev:i386 libssl-dev:i386 libssl0.9.8:i386  libx11-dev:i386 libsm-dev:i386 libice-dev:i386 libgl1-mesa-glx:i386 libgl1-mesa-dev:i386 libxext-dev:i386 libglapi-mesa:i386 uuid-dev:i386 libcurl3-dev:i386
-
-*IMPORTANT*: These instructions were tested using Ubuntu 17.04/64-bits. We want to maintain them always up-to-date, so please inform if anything is not working, or if you are required to change something to make it work in other OSes. 
 
 To build it:
 
@@ -53,17 +47,36 @@ Currently I (pocho) suggest using qemu, it is fast, open and lightweight. Instal
 
     sudo apt install qemu
 
+## Development instructions
+
+There are two ways of contributing. At the image level or at the VM level.
+
+#### Image-level contributions
+This is the standard way of contributing. Usually most users will work only at the image level. If all your contributions live at the image side then you could just make a pull request of smalltalk code to the SqueakNOS repository. 
+
+(Setup the corresponding git repo) 
+
+#### VM-level contributions
+
+The SqueakNOS code at the Virtual Machine level follows the standard Squeak development process. This means that we have a plugin written in Slang (SqueakNOSPlugin) and we generate the C code to compile it from an Smalltalk image.   
+So, if you are working with some very low-level features, found low-level bugs or just would like to propose a new primitive you will need to change the Slang code. 
+
+Under the [image](https://github.com/nopsys/opensmalltalk-vm/tree/Cog/image) folder you will find an image that already have everything necessary to generate the sources for both the VM itself and all the plugins. To generate the code just open a browser and run:
+
+    VMMaker generateSqueakNOS64VM "This generates the code for the opensmalltalk-vm"
+
+    VMMaker generateVMPlugins "This generates the code for all the plugins including SqueakNOSPlugin"
+
+The image should contain the last released version of the SqueakNOSPlugin. In case you want to update to the latest development version you can do that using the monticello browser.
+
+The images are Squeak Smalltalk images. At the time of writing, they were the only supported images for developing open-smalltalk. So, to open the image you will previously need to download a Squeak VM. You can do that from the [official Squeak website](http://squeak.org/) or try running the scripts the open-smalltalk VMs provide (note that, unfortunately, they are not always up to date):
+
+    ./getGoodSpur64VM.sh
     
-### Compiling Pharo VM
+In case you would like to generate a completely fresh image with everything up to date try (good luck! :) ):
 
-This step is not necessary at all, but might be a good excercise before building Cog/nopsys. To build the Pharo VM you have to install some dependencies. 
-
-    $> cd CogNOS/opensmalltalk-vm
-    $> mkdir sources && cd sources
-    $> curl http://files.pharo.org/sources/PharoV50.sources.zip > PharoV50.sources.zip && unzip PharoV50.sources.zip
-    $> cd ../build.linux32x86/pharo.cog.spur/build
-    $> ./mvm
-
+    ./buildSpurTrunk64Image.sh
+    
 #### Things to figure out if you have time: 
 
  - I really don't know why PharoV50.sources is needed, but without it the build script fails, so you have to download it by hand as in the instructions above. 
