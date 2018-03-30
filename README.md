@@ -4,12 +4,12 @@ This repo contains a nopsys-style version of Cog VM. That means a Cog VM that ru
 For more information visit  https://github.com/nopsys/nopsys
 
 ## How to build the project
-Our goal is that building Nopsys becomes a *push one button* process. We have already put everything needed in this
-repository. Unluckily, Nopsys depends on the open-smalltalk VMs, which have a very cumbersome building process. 
-We would like to still work on improving the whole building process. By the moment, we provide a bunch of scripts 
+One of our goals is that building Nopsys becomes a *push one button* process. Everything that is needed has already been put in this
+repository. Unluckily, CogNOS depends on the open-smalltalk VMs, which have a very cumbersome building process. 
+We would like to work more on improving the whole building process. By the moment, we provide a bunch of scripts 
 for automatically generating all the needed artifacts. 
 
-For now nopsys only supports 64-bit OS. 
+For now CogNOS only supports a 64-bit Cog VM with Spur64 object format. 
 
 To checkout the code:
 
@@ -43,7 +43,7 @@ VMWare and Bochs. You can even run the image with an attached gdb (through qemu)
     make try-vmware  # runs it using WMWare player
 
 
-Currently I (pocho) suggest using qemu, it is fast, open and lightweight. Installs with:
+Currently I (pocho) suggest using qemu, it is fast, open, easy to install and lightweight. Installs with:
 
     sudo apt install qemu
 
@@ -54,11 +54,11 @@ There are two ways of contributing. At the image level or at the VM level.
 #### Image-level contributions
 This is the standard way of contributing. Usually most users will work only at the image level. If all your contributions live at the image side then you could just make a pull request of smalltalk code to the SqueakNOS repository. 
 
-(Setup the corresponding git repo) 
+(Setup the corresponding git repo)
 
 #### VM-level contributions
 
-The SqueakNOS code at the Virtual Machine level follows the standard Squeak development process. This means that we have a plugin written in Slang (SqueakNOSPlugin) and we generate the C code to compile it from an Smalltalk image.   
+Modifications and additions to Cog VM in CogNOS follow the standard Squeak development process: there is a plugin written in Slang (SqueakNOSPlugin) which is used to generate the corresponding C code from an Smalltalk image.   
 So, if you are working with some very low-level features, found low-level bugs, or just would like to propose a new primitive you will need to change the Slang code. 
 
 Under the [image](https://github.com/nopsys/opensmalltalk-vm/tree/Cog/image) folder you will find an image compressed in a zip that already have everything necessary to generate the sources for both the VM itself and all the plugins. The development images are Squeak Smalltalk images. At the time of writing, they were the only supported images for developing open-smalltalk. So, to open the image you will previously need to download a Squeak VM. You can do that from the [official Squeak website](http://squeak.org/) or try running the scripts the open-smalltalk VMs provide (note that, unfortunately, they are not always up to date):
@@ -70,7 +70,7 @@ To generate the code just open a browser and run:
     VMMaker generateSqueakNOS64VM "This generates the code for the opensmalltalk-vm"
     VMMaker generateVMPlugins "This generates the code for all the plugins including SqueakNOSPlugin"
 
-The image should contain the last released version of the SqueakNOSPlugin. In case you would like to generate a completely fresh image with everything up to date try (Again, we are not in charge of the open-smalltalk. Usually the repo is stable but a few times we found that the build process was not up to date so, good luck! :) ):
+The image should contain the latest released version of the SqueakNOSPlugin. In case you would like to generate a completely fresh image with everything up to date, try (again, we are not in charge of the open-smalltalk. Usually the repo is stable but a few times we found that the build process was not up to date so, good luck! :) ):
 
     ./buildSpurTrunk64Image.sh
     
