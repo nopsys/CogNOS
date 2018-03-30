@@ -59,20 +59,18 @@ This is the standard way of contributing. Usually most users will work only at t
 #### VM-level contributions
 
 The SqueakNOS code at the Virtual Machine level follows the standard Squeak development process. This means that we have a plugin written in Slang (SqueakNOSPlugin) and we generate the C code to compile it from an Smalltalk image.   
-So, if you are working with some very low-level features, found low-level bugs or just would like to propose a new primitive you will need to change the Slang code. 
+So, if you are working with some very low-level features, found low-level bugs, or just would like to propose a new primitive you will need to change the Slang code. 
 
-Under the [image](https://github.com/nopsys/opensmalltalk-vm/tree/Cog/image) folder you will find an image that already have everything necessary to generate the sources for both the VM itself and all the plugins. To generate the code just open a browser and run:
+Under the [image](https://github.com/nopsys/opensmalltalk-vm/tree/Cog/image) folder you will find an image compressed in a zip that already have everything necessary to generate the sources for both the VM itself and all the plugins. The development images are Squeak Smalltalk images. At the time of writing, they were the only supported images for developing open-smalltalk. So, to open the image you will previously need to download a Squeak VM. You can do that from the [official Squeak website](http://squeak.org/) or try running the scripts the open-smalltalk VMs provide (note that, unfortunately, they are not always up to date):
+
+    ./getGoodSpur64VM.sh
+    
+To generate the code just open a browser and run:
 
     VMMaker generateSqueakNOS64VM "This generates the code for the opensmalltalk-vm"
     VMMaker generateVMPlugins "This generates the code for all the plugins including SqueakNOSPlugin"
 
-The image should contain the last released version of the SqueakNOSPlugin. In case you want to update to the latest development version you can do that using the monticello browser.
-
-The images are Squeak Smalltalk images. At the time of writing, they were the only supported images for developing open-smalltalk. So, to open the image you will previously need to download a Squeak VM. You can do that from the [official Squeak website](http://squeak.org/) or try running the scripts the open-smalltalk VMs provide (note that, unfortunately, they are not always up to date):
-
-    ./getGoodSpur64VM.sh
-    
-In case you would like to generate a completely fresh image with everything up to date try (good luck! :) ):
+The image should contain the last released version of the SqueakNOSPlugin. In case you would like to generate a completely fresh image with everything up to date try (Again, we are not in charge of the open-smalltalk. Usually the repo is stable but a few times we found that the build process was not up to date so, good luck! :) ):
 
     ./buildSpurTrunk64Image.sh
     
