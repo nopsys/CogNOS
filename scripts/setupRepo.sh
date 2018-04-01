@@ -29,10 +29,12 @@ fi
 
 
 pushd $SCRIPT_PATH
-    INFO "Downloading Pharo image with VMMaker"
-    bash checkoutVMMaker.sh
-    OK "Pharo image downloaed"
-    bash newImageWithProjectLoaded.sh "loadSqueakNOSVM.st"
+    INFO "Downloading Squeak image with VMMaker... "
+	cd ../opensmalltalk-vm/image bash buildspurtrunkvmmaker64image.sh
+    OK "done"
+
     bash newImageWithProjectLoaded.sh "loadSqueakNOSImage.st"
     bash installImage.sh
-popd > /dev/null    
+popd > /dev/null
+
+
