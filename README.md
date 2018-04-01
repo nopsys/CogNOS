@@ -46,7 +46,7 @@ This script will download and configure all the needed smalltalk images and a co
 
     cd opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
-    make iso # builds libnopsys.lib and links it to vm.obj
+    make iso # builds libnopsys.lib, links it to vm.obj and generates a bootable ISO image
 
 #### 5. Try it
 
