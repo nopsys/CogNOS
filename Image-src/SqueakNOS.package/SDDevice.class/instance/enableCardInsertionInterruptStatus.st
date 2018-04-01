@@ -1,3 +1,0 @@
-enabling interrupts
-enableCardInsertionInterruptStatus
-	self setInterruptStatusEnableBit: 6

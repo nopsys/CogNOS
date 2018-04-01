@@ -1,3 +1,0 @@
-accessing
-messageSize
-	^ self bufferSize

@@ -1,3 +1,0 @@
-internal
-size
-	^computer snapshotEndAddress 

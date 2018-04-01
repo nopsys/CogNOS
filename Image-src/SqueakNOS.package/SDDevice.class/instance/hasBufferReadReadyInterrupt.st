@@ -1,3 +1,0 @@
-testing interrupts
-hasBufferReadReadyInterrupt
-	^self testInterruptStatusBit: 5

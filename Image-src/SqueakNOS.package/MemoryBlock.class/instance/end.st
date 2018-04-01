@@ -1,3 +1,0 @@
-accessing
-end
-	^interval last

@@ -1,3 +1,0 @@
-accessing
-nextByte
-	^ receivedChars next

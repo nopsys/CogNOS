@@ -1,7 +1,0 @@
-I'm a HadwareDevice. My subclasses implement support for different devices, for example, Keyboard, Mouse, Network cards, PCI support, etc.
-
-My baseResource dictates whether I use ExternalMemory or ExternalOPort to talk to the hardware.
-
-All accessors #(byteAt: shortAt: longAt: byteAt:put: shortAt:put: longAt:put:) are zero based. This is different from Smalltalk convention, and it was not an easy decision, but we finally opted for 0 based accessors to match all existing documentation for devices, so it's a lot easy to follow from code to documentation and back.
-
-To do this zero based accessing we are playing silly and processor consuming tricks right now, we'll probably improve this in the future. The trick is: ExternalAddress (as implemented by stock Squeak) is 1 based, so we have to add one to the index before accessing the resources, howerver, in the native implementation, 1 has to be substracted back from the index to access the right memory address. To match this behaviour we had to make ExternalIOPort also be 1 based, so, before calling the primitives for ExternalIOPort we substract 1 to the index, and before calling the public accessors we have to add 1 to it... in short, if we could make ExternalAddress be zero based (or if we reimplement it in our own class) we could remove all this +/- 1 overhead. However, right now, we only want to make it work, and take note for the future.

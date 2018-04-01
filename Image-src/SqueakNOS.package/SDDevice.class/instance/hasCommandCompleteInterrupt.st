@@ -1,3 +1,0 @@
-testing interrupts
-hasCommandCompleteInterrupt
-	^self testInterruptStatusBit: 0

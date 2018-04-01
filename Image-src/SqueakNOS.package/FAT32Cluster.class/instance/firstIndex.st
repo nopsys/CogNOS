@@ -1,3 +1,0 @@
-private
-firstIndex
-	^1

@@ -1,3 +1,0 @@
-testing interrupts
-hasTransferCompleteInterrupt
-	^self testInterruptStatusBit: 1

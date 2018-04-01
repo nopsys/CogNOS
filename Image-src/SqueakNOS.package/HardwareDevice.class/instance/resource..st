@@ -1,3 +1,0 @@
-initialization
-resource: anExternalIOPortOrZeroBasedAddress
-	resource := anExternalIOPortOrZeroBasedAddress

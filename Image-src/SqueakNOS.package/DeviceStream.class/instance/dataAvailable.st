@@ -1,3 +1,0 @@
-testing
-dataAvailable
-	^ device dataAvailable

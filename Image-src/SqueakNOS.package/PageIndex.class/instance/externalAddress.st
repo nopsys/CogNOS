@@ -1,3 +1,0 @@
-private
-externalAddress
-	^handle address

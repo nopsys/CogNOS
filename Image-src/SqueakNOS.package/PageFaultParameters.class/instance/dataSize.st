@@ -1,3 +1,0 @@
-methodsFor:
-dataSize 
-	^4

@@ -1,3 +1,0 @@
-accessing
-peekKey
-	^ pressedKeys peek

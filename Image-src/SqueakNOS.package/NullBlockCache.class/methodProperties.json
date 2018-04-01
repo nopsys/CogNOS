@@ -1,9 +1,0 @@
-{
-	"class" : {
-		"on:" : "Pocho 7/21/2010 18:36" },
-	"instance" : {
-		"flushWrites" : "Pocho 7/21/2010 18:55",
-		"from:to:" : "Pocho 7/21/2010 18:41",
-		"on:" : "Pocho 7/21/2010 18:36",
-		"readInto:startWritingAtByte:startReadingAtByte:bytesCount:" : "Pocho 7/21/2010 16:35",
-		"replaceFromByte:bytesCount:with:startingAtByte:" : "Pocho 7/21/2010 19:16" } }

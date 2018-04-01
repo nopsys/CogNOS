@@ -1,3 +1,0 @@
-internal
-startAddress
-	^computer imageStartAddress

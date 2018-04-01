@@ -1,3 +1,0 @@
-methodsFor:
-new
-	^self basicNew

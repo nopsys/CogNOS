@@ -1,3 +1,0 @@
-enabling interrupts
-enableBufferReadyInterrupt
-	self setInterruptEnableBit: 5

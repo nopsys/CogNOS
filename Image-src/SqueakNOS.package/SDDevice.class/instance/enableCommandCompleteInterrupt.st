@@ -1,3 +1,0 @@
-enabling interrupts
-enableCommandCompleteInterrupt
-	self setInterruptEnableBit: 0; enableCommandCompleteInterruptStatus
