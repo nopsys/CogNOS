@@ -1,3 +1,0 @@
-private
-isActivePlatform	
-	^Smalltalk isSqueakNOS

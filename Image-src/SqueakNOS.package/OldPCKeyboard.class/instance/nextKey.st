@@ -1,3 +1,0 @@
-accessing
-nextKey
-	^ pressedKeys next

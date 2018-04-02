@@ -1,3 +1,0 @@
-snapshotting
-snapshotStartAddress
-	^info snapshotStartAddress

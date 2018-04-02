@@ -1,3 +1,0 @@
-accessing
-close
-	device close

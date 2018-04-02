@@ -1,3 +1,0 @@
-device protocol
-isOpen
-	^ true

@@ -1,3 +1,0 @@
-primitives
-primGetPosition: id
-	^offset

@@ -1,3 +1,0 @@
-accessing
-fatRecordSize
-	^fat recordSize

@@ -1,3 +1,0 @@
-private
-recordSize
-	^32

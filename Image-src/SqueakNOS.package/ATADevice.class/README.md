@@ -1,1 +1,0 @@
-An ATADevice is our high level representation of an ATA Hard Disk, which is a BlockDevice with blocks (sectors) of 512 bytes. It uses an ATA Controller to control the device at the lowest level. The deviceNumber is a low-level number used by the controller, where 0 means master and 1 means slave.

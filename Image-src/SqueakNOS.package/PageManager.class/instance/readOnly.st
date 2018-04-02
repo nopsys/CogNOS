@@ -1,3 +1,0 @@
-services
-readOnly
-	directory readOnly

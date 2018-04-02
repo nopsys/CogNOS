@@ -1,1 +1,0 @@
-I provide objects that allow to see files as block devices. It's similar to loop devices in linux.

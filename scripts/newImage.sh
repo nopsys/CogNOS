@@ -4,7 +4,7 @@
 
 VM=vmTLatest70
 
-set -e
+set -e  # exit on error
 
 SCRIPT_PATH=`dirname $0`;
 source $SCRIPT_PATH/basicFunctions.inc

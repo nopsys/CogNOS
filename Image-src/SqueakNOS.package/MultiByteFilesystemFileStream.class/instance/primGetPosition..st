@@ -1,3 +1,0 @@
-private
-primGetPosition: id
-	^offset

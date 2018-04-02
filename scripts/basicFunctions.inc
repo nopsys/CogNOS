@@ -69,6 +69,3 @@ function check_for() {
   fi
 }
 
-function check_for_crystal() {
-  check_for "crystal" "Please see http://crystal-lang.org/docs/installation/index.html" "$1"
-}
