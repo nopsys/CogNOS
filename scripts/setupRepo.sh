@@ -12,6 +12,12 @@ OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
 VM_DEV_DIR="../opensmalltalk-vm/image"
 VM_DEV_IMAGE_NAME="BuildCogNOS"
 
+INFO "Initializing submodules"
+pushd $BASE_DIR
+    load_submodule
+popd > /dev/null
+OK "Submodules initialized"
+
 INFO "Configuring Sparse checkout for the submodules"
 cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
@@ -19,13 +25,11 @@ third-party
 platforms
 .git*
 EOF
-OK "Sparse checkout configured"
-
-INFO "Initializing submodules"
-pushd $BASE_DIR
-    load_submodule
+pushd $BASE_DIR/opensmalltalk-vm/
+    git config core.sparsecheckout true
+    git read-tree -mu HEAD
 popd > /dev/null
-OK "Submodules initialized"
+OK "Sparse checkout configured"
 
 INFO "Checking for openlibm"
 if [ ! -d "$OPENLIBM_DIR" ]
