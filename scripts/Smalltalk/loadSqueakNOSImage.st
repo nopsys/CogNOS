@@ -1,14 +1,18 @@
 Author useAuthor: 'LoadSqueakNOS' during: [ 
 
-((Smalltalk imageDirectory asFileReference) / '../scripts/Smalltalk/updateIceberg.st') fileIn.
-
-"Based on the same file from the pharo-vm project"
+	"Based on the same file from the pharo-vm project"
+	IceCredentialsProvider useCustomSsh: true.
+	IceCredentialsProvider sshCredentials
+		publicKey: '/Users/guidochari/.ssh/gitKeys.pub';
+		privateKey: '/Users/guidochari/.ssh/gitKeys'.
 
 	myRepository := IceRepositoryCreator new
-	url: 'git@github.com:nopsys/PharoNOS.git';
-	createRepository.
+		url: 'git@github.com:nopsys/PharoNOS.git';
+		createRepository.
 	
-    (myRepository addPackageNamed: 'SqueakNOS') loadLatest.
+    myRepository register.
+	myRepository checkoutBranch: 'master'.
+	(myRepository addPackageNamed: 'SqueakNOS') loadLatest.
 
 ].
 

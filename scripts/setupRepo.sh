@@ -9,6 +9,17 @@ IMAGE_DIR="$SCRIPT_PATH/../image"
 BASE_DIR="$SCRIPT_PATH/.."
 THIRD_PARTY_DIR="$BASE_DIR/opensmalltalk-vm/third-party/"
 OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
+VM_DEV_DIR="../opensmalltalk-vm/image"
+VM_DEV_IMAGE_NAME="BuildCogNOS"
+
+INFO "Configuring Sparse checkout for the submodules"
+cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
+spur64src
+third-party
+platforms
+.git*
+EOF
+OK "Sparse checkout configured"
 
 INFO "Initializing submodules"
 pushd $BASE_DIR
@@ -27,14 +38,17 @@ then
     OK "Openlibm ok"
 fi
 
-
-pushd $SCRIPT_PATH
-    INFO "Downloading Squeak image with VMMaker... "
-	cd ../opensmalltalk-vm/image bash buildspurtrunkvmmaker64image.sh
+if [ ! -f "$VM_DEV_DIR/$VM_DEV_IMAGE_NAME.image" ]
+then
+pushd $VM_DEV_DIR
+    INFO "Downloading Squeak image with VMMaker for VM-level development... "
+	bash buildspurtrunkvmmaker64image.sh
     OK "done"
-
-    bash newImageWithProjectLoaded.sh "loadSqueakNOSImage.st"
-    bash installImage.sh
 popd > /dev/null
+fi
 
+INFO "Downloading Pharo image with SqueakNOS code for image-level development..."
+bash newImageWithProjectLoaded.sh "Smalltalk/updateIceberg.st" "Smalltalk/loadSqueakNOSImage.st"
+#bash installImage.sh
+OK "done"
 
