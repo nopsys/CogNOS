@@ -23,6 +23,7 @@ cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
 third-party
 platforms
+image
 .git*
 EOF
 pushd $BASE_DIR/opensmalltalk-vm/
