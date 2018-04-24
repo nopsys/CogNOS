@@ -23,7 +23,15 @@ cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
 third-party
 platforms
-image
+image/envvars.sh
+image/getGoodSpur64VM.sh
+image/CogNOS Generation Workspace.text
+image/BuildSqueakSpurTrunkVMMakerImage.st
+image/buildspurtrunkvmmaker64image.sh
+image/updatespur64image.sh
+image/getlatesttrunk64image.sh
+image/NukePreferenceWizardMorph.st
+image/UpdateSqueakTrunkImage.st
 .git*
 EOF
 pushd $BASE_DIR/opensmalltalk-vm/
