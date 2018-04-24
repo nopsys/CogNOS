@@ -32,6 +32,7 @@ image/updatespur64image.sh
 image/getGoodSpur64VM.sh
 image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
+image/UpdateSqueakTrunkImage.st
 .git*
 EOF
 pushd $BASE_DIR/opensmalltalk-vm/
