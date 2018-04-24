@@ -24,7 +24,7 @@ cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
 platforms/nopsys
 platforms/Cross
-./third-party/
+third-party/*.spec
 image/envvars.sh
 image/CogNOS Generation Workspace.text
 image/BuildSqueakSpurTrunkVMMakerImage.st
@@ -34,7 +34,6 @@ image/getGoodSpur64VM.sh
 image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
-.git*
 EOF
 pushd $BASE_DIR/opensmalltalk-vm/
     git config core.sparsecheckout true
