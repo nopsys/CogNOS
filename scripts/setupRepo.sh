@@ -22,9 +22,9 @@ OK "Submodules initialized"
 INFO "Configuring Sparse checkout for the submodules"
 cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
-third-party
 platforms/nopsys
 platforms/Cross
+./third-party/
 image/envvars.sh
 image/CogNOS Generation Workspace.text
 image/BuildSqueakSpurTrunkVMMakerImage.st
