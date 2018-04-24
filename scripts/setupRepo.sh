@@ -17,6 +17,9 @@ INFO "Initializing submodules"
 pushd $BASE_DIR
     load_submodule
 popd > /dev/null
+pushd $BASE_DIR/opensmalltalk-vm/
+    ./scripts/updateSCCSVersions
+popd > /dev/null
 OK "Submodules initialized"
 
 INFO "Configuring Sparse checkout for the submodules"
