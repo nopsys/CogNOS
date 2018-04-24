@@ -22,9 +22,14 @@ if [ ! -f $IMAGE_DIR/Pharo.image ]
   popd > /dev/null
 fi
 
-INFO "LOADING VM MAKER SOURCES INTO IMAGE"
+INFO "LOADING PROJECT INTO IMAGE"
 set -x
-./pharo Pharo.image "$IMAGE_DIR/../scripts/$1"
+SCRIPTS=""
+for var in "$@"
+do
+    SCRIPTS+="$IMAGE_DIR/../scripts/$var "
+done
+./pharo Pharo.image $SCRIPTS
 
 rm Pharo.image
 rm Pharo.changes

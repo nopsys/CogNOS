@@ -2,7 +2,8 @@
 
 #Based on the same file from pharo-vm project
 
-VM=vmTLatest70
+#Threaded Heartbeat VMs do not work on OSX 
+VM="vm61"
 
 set -e  # exit on error
 
