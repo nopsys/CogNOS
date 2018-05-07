@@ -1,11 +1,8 @@
 #!/usr/bin/env bash
 
-set -e
+source `dirname $0`/basicFunctions.inc
 
-SCRIPT_PATH=`dirname $0`;
-source $SCRIPT_PATH/basicFunctions.inc
-
-BASE_DIR="$SCRIPT_PATH/.."
+BASE_DIR=".."
 IMAGE_DIR="$BASE_DIR/image"
 THIRD_PARTY_DIR="$BASE_DIR/opensmalltalk-vm/third-party/"
 OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
@@ -39,11 +36,13 @@ image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
 EOF
+
 pushd $BASE_DIR/opensmalltalk-vm/
     git config core.sparsecheckout true
     git read-tree -mu HEAD
 popd > /dev/null
 OK "Sparse checkout configured"
+
 
 INFO "Checking for openlibm"
 if [ ! -d "$OPENLIBM_DIR" ]
@@ -67,11 +66,9 @@ fi
 
 if [ ! -f "$IMAGE_DIR/$IMAGE_NAME.image" ]
 then
-    pushd $SCRIPT_PATH
     INFO "Downloading Pharo image with SqueakNOS code for image-level development..."
     bash newImageWithProjectLoaded.sh "Smalltalk/updateIceberg.st" "Smalltalk/loadSqueakNOSImage.st"
     #bash installImage.sh
     OK "done"
-    popd > /dev/null
 fi
 

@@ -1,37 +1,23 @@
 #!/usr/bin/env bash
-set -e
 
-SCRIPT_PATH=`dirname $0`;
-source $SCRIPT_PATH/basicFunctions.inc
+source `dirname $0`/basicFunctions.inc
 
-IMAGE_DIR="$SCRIPT_PATH/../image"
+./newImage.sh
 
-if [ ! -d $IMAGE_DIR ]
-  then
-  ./newImage.sh
-fi
-
-
-pushd $IMAGE_DIR > /dev/null
-
-
-if [ ! -f $IMAGE_DIR/Pharo.image ]
-  then
-  pushd $SCRIPT_PATH
-  ./newImage.sh
-  popd > /dev/null
-fi
+IMAGE_DIR="../image"
+cd $IMAGE_DIR
 
 INFO "LOADING PROJECT INTO IMAGE"
 set -x
 SCRIPTS=""
 for var in "$@"
 do
-    SCRIPTS+="$IMAGE_DIR/../scripts/$var "
+    SCRIPTS+="../scripts/$var "
 done
-./pharo Pharo.image $SCRIPTS
+
+./pharo-ui Pharo.image $SCRIPTS
 
 rm Pharo.image
 rm Pharo.changes
 
-popd > /dev/null
+

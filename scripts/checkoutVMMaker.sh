@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
 
-set -e
-
-SCRIPT_PATH=`dirname $0`;
-source $SCRIPT_PATH/basicFunctions.inc
+source `dirname $0`/basicFunctions.inc
 
 REPO_NAME="VMMaker"
 REPO_PATH="$SCRIPT_PATH/../$REPO_NAME"

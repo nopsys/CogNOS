@@ -1,19 +1,13 @@
 #!/usr/bin/env bash
 
-set -e
+source `dirname $0`/basicFunctions.inc
 
-SCRIPT_PATH=`dirname $0`;
-source $SCRIPT_PATH/basicFunctions.inc
-
-IMAGE_DIR="$SCRIPT_PATH/../image"
-IMAGE_DST_DIR="$SCRIPT_PATH/../nopsys/build/extra"
+IMAGE_DIR="../image"
+IMAGE_DST_DIR="../nopsys/build/extra"
 
 FILENAME="SqueakNOS"
 
-if [ ! -d $IMAGE_DST_DIR ]
-  then
-  mkdir $IMAGE_DST_DIR
-fi
+mkdir -p $IMAGE_DST_DIR
 
 cp "$IMAGE_DIR/$FILENAME.image" "$IMAGE_DST_DIR/$FILENAME.image"
 cp "$IMAGE_DIR/$FILENAME.changes" "$IMAGE_DST_DIR/$FILENAME.changes"

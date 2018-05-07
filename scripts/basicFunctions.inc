@@ -1,8 +1,10 @@
 #!/bin/bash
 
-pushd `dirname $0` > /dev/null
-SCRIPT_PATH=`pwd`
-popd > /dev/null
+set -e  # exit on error
+
+SCRIPT_PATH=`dirname $0`
+
+cd $SCRIPT_PATH
 
 # set up color commands
 if [ -t 1 -a -t 2 -a \( `type -t tput` = "file" \) ]; then
@@ -68,4 +70,10 @@ function check_for() {
     fi
   fi
 }
+
+get_web_getter
+
+
+
+
 
