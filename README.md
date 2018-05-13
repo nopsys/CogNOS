@@ -3,15 +3,7 @@
 This repo contains a nopsys-style version of Cog VM. That means a Cog VM that runs a Squeak/Pharo/Cuis image without an OS.
 For more information visit  https://github.com/nopsys/nopsys
 
-## Getting started
-
-To work with CogNOS you will need a few artifacts. Instructions on how to get or build each of them are written in the next sections. The list of things we will use is this:
-
-- a compiled `64-bit cog vm` - to be able to run a squeak/pharo/cuis image you need an already working Cog VM.
-- a `64-bit spur squeak/pharo/cuis NOS image` - this image will contain the "OS" drivers. 
-- the sources of `opensmalltalk-vm` - to run `Cog` within `nopsys` you need the sources of `Cog`
-- a `64-bit squeak vmmaker image` - this is needed only to translate SqueakNOS slang plugin to C.
-- a `nopsys` repo - will provide the infrastructure to build a basic libnopsys, link it with the Cog VM and generate a bootable ISO image. Also will let us run the ISO image in a system VM like VirtualBox or QEMU.
+## Building CogNOS
 
 We haven't done any release yet, so the only way to try CogNOS is to build it yourself, which shall be easy.
 One of our goals is that both using and building Nopsys becomes a *push one button* process.
@@ -19,14 +11,24 @@ Everything that is needed has already been put in the CogNOS repository.
 
 ## Fetching and building artifacts
 
-CogNOS depends on the open-smalltalk VM, which has a very cumbersome building process. 
-We would like to work more on improving the whole building process. However, we provide
-a bunch of scripts for automatically generating all the needed artifacts. 
+To build CogNOS you will need several artifacts:
 
-#### 1. Checkout the CogNOS repo and submodules:
+- a compiled `64-bit cog vm` - to be able to run a squeak/pharo/cuis image you need an already working Cog VM.
+- a `64-bit spur squeak/pharo/cuis NOS image` - this image will contain the "OS" drivers. 
+- the sources of `opensmalltalk-vm` - to run `Cog` within `nopsys` you need the sources of `Cog`
+- a `64-bit squeak vmmaker image` - this is needed only to translate SqueakNOS slang plugin to C.
+
+Below we describe how to automatically generate all the needed artifacts. 
+
+<!--
+- a `nopsys` repo - will provide the infrastructure to build a basic libnopsys, link it with the Cog VM and generate a bootable ISO image. Also will let us run the ISO image in a system VM like VirtualBox or QEMU.
+-->
+
+
+#### 1. Checkout the CogNOS:
 
     git clone https://github.com/nopsys/CogNOS.git
-    git submodule update --init --recursive
+<!--    git submodule update --init --recursive -->
 
 The CogNOS repo contains the scripts that will download all other artifacts.
 
