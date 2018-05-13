@@ -46,22 +46,32 @@ This script will download and configure all the needed smalltalk images and a co
 
 #### 4. Build CogNOS:
 
-Currently, this consists of two steps: translating Slang sources to C and then building them. While
-we are trying to automate the first step, you'll still need to do some manual work. Open the VMMaker
+Currently, this consists of two steps: 
+1. Translating Slang sources to C 
+2. Build them. 
+
+While we are trying to automate the first step, you'll still need to do some manual work. Open the VMMaker
 image from a terminal, like this:
 
     cd opensmalltalk-vm/image
-    ./sqlinux.201805090836/squeak BuildCogNOS.image
+    
+    ./sqlinux.201805090836/squeak BuildCogNOS.image (on linux)
+or
+    ./Squeak64.201805090836.app/Contents/MacOS/Squeak (on OSX)
 
-You'll find a workspace there, where you need to execute these two lines:
+You'll find a workspace there. You need to execute these two lines:
 
     VMMaker generateSqueakNOS64VM
     VMMaker generateSqueakNOSPlugins
 
-If asked about overwriting files, just answer yes. You can quit without saving and are now ready
-for the second step, which is:
+If asked about overwriting files, just answer yes. You can quit the image without saving. We are almost ready for the second step, but before building you must inform the project where several necessary building tools reside on your system. In most cases you will only need to copy the default configuration file:
 
-    cd opensmalltalk-vm/platforms/nopsys
+    cd ../../nopsys
+    cp compilation.conf.default compilation.conf 
+
+In case you afterwards have any building problem the best option is to check is this file is properly configured for your system. Now, yes, we are ready to build: 
+
+    cd ../opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
     make iso # builds libnopsys.lib, links it to vm.obj and generates a bootable ISO image
 
