@@ -136,7 +136,7 @@ A few tips go here:
    using qemudbg unless looking for _really_ basic and low level errors.
 
  - To launch `qemudbg` you'll have to adjust a _magic_ number in the `Makefile` ;). This is because
-   of a problem with `gdb`. If it connected directly, it would see code running in 32-bit mode, and then 
+   of a problem with `gdb`. If `gdb` connected directly, it would see code running in 32-bit mode, and then 
    when switching to long mode (64 bits) it will go crazy. Our workaround is to connect after a few
    seconds of simulation (to guarantee that `gdb` only sees 64 bits mode). To do this you have to go to the
    `Makefile` in `opensmalltalk-vm/platforms/nopsys` and change the `sleep` line to some value according
@@ -146,9 +146,10 @@ A few tips go here:
    execution. You can use that pause to place a few breakpoints. It can be useful to put a break in
    `warning` so that it pauses each time an assertion fails.
 
- - If you focus on the cli and press `ctrl+c`, execution will pause. There you can try things like
-   `p printCallStack()` to print the C stack with `bt`, or even the smalltalk call stack (this may or may not
-   work depending on the instant on which it paused, you may have to try a few times, rebooting each time).
+ - If you focus on the cli and press `ctrl+c`, execution will pause. There you can execute things like
+   `bt` to print the C stack, or even something like `p printCallStack()` to show the smalltalk call
+   stack (this may or may not work depending on the instant on which the VM got paused, you may have to try a
+   few times, rebooting each time).
 
  - If you want, from smalltalk code, to show a message in the low-level console, you can just use
    this: `Computer show: aString`
