@@ -122,3 +122,35 @@ The image should contain the latest released version of the SqueakNOSPlugin. In 
 
 ## How to collaborate
 We will create issues, here in github, with different degrees of complexity...
+
+## How to debug low level problems
+
+Debugging smalltalk code is easy when you have a smalltalk browser available, but low
+level problems just break the VM so it is harder to understand what is going on.
+A few tips go here:
+
+ - There are basically two low debugging workflows: `make try-bochs` and `make try-qemudbg`.
+   With bochs you get extreme low level information (i.e. you can see the IDT, GDT, PT), but
+   you can't see C code, emulation is slow and the debugging cli is pretty basic. With qemu
+   you loose low level details but in exchange you get a full blown GDB console. We recommend
+   using qemudbg unless looking for _really_ basic and low level errors.
+
+ - To launch `qemudbg` you'll have to adjust a _magic_ number in the `Makefile` ;). This is because
+   of a problem with `gdb`. If it connected directly, it would see code running in 32-bit mode, and then 
+   when switching to long mode (64 bits) it will go crazy. Our workaround is to connect after a few
+   seconds of simulation (to guarantee that `gdb` only sees 64 bits mode). To do this you have to go to the
+   `Makefile` in `opensmalltalk-vm/platforms/nopsys` and change the `sleep` line to some value according
+   to the speed of your machine. Waiting ~6 seconds is usually enough.
+
+ - When using `qemudbg`, it will pause execution after connection. You'll have to manually continue
+   execution. You can use that pause to place a few breakpoints. It can be useful to put a break in
+   `warning` so that it pauses each time an assertion fails.
+
+ - If you focus on the cli and press `ctrl+c`, execution will pause. There you can try things like
+   `p printCallStack()` to print the C stack with `bt`, or even the smalltalk call stack (this may or may not
+   work depending on the instant on which it paused, you may have to try a few times, rebooting each time).
+
+ - If you want, from smalltalk code, to show a message in the low-level console, you can just use
+   this: `Computer show: aString`
+
+
