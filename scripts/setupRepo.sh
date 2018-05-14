@@ -43,6 +43,8 @@ pushd $BASE_DIR/opensmalltalk-vm/
 popd > /dev/null
 OK "Sparse checkout configured"
 
+INFO "Checking whether a compilation config exists (and creating a default one if not)"
+cp -n $BASE_DIR/nopsys/compilation.conf.example $BASE_DIR/nopsys/compilation.conf
 
 INFO "Checking for openlibm"
 if [ ! -d "$OPENLIBM_DIR" ]

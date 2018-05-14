@@ -64,12 +64,8 @@ You'll find a workspace there. You need to execute these two lines:
     VMMaker generateSqueakNOS64VM
     VMMaker generateSqueakNOSPlugins
 
-If asked about overwriting files, just answer yes. You can quit the image without saving. We are almost ready for the second step, but before building you must inform the project where several necessary building tools reside on your system. In most cases you will only need to copy the default configuration file:
-
-    cd ../../nopsys
-    cp compilation.conf.default compilation.conf 
-
-In case you afterwards have any building problem the best option is to check is this file is properly configured for your system. Now, yes, we are ready to build: 
+If asked about overwriting files, just answer yes. You can quit the image without saving. We are
+ready for the second step, to build everything: 
 
     cd ../opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
