@@ -83,7 +83,9 @@ VMWare and Bochs. You can even run the image with an attached gdb (through qemu)
     make try-vmware  # runs it using WMWare player
 
 
-Currently I (pocho) suggest using qemu, it is fast, open, easy to install and lightweight. Installs with:
+Depending on the kind of work you want to do, we suggest using different VMs. For trying it, VirtualBox
+is the fastest. If you want to debug Cog VM, we suggest using qemu which, while not as fast as VB,
+is open, easy to install and lightweight. It installs with:
 
     sudo apt install qemu
 
