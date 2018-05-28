@@ -8,7 +8,6 @@ IMAGE_DIR="../image"
 cd $IMAGE_DIR
 
 INFO "LOADING PROJECT INTO IMAGE"
-set -x
 SCRIPTS=""
 for var in "$@"
 do
