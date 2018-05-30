@@ -14,7 +14,7 @@ do
     SCRIPTS+="../scripts/$var "
 done
 
-./pharo-ui Pharo.image $SCRIPTS
+./pharo Pharo.image $SCRIPTS
 
 rm Pharo.image
 rm Pharo.changes
