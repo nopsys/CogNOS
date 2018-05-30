@@ -1,14 +1,18 @@
 language: c
+
 matrix:
   include:
   - os: linux
     compiler: gcc
+
 git:
   submodules: false
+
 addons:
   apt:
     packages: 
-before_install: 
+
+      before_install: 
 
 before_script:
   - "./scripts/setupRepo.sh"
@@ -17,12 +21,12 @@ script:
   - "./scripts/build.sh"
   - "./scripts/Releasing/release.sh"
 
-  cache:
+cache:
   ccache: true
   directories:
   - external
 
-  deploy:
+deploy:
   provider: releases
   api_key:
     secure: kF/QxtqJfIGttq1pKfMA6ptav6WOKaCKiXdWAcZnlQBbDirhe1hlplBP9XX/Cibc+waPsKeISGw5RvArvU29H5nk3bZ4xLWx4aH+ZBEsnqzc0etdg9a0GOV9sJJb9li+11SKBhJ5YflhYzqBhFTIUmCsdzgOFoXSJc7Lr4EWFxaMuHdONEqJkOKc/HYGgQmyr2Vp01g46hTfmAa0WktoWoQVexcmS13tgajBgGLamqLE4lw1sDokcJmWQ52mbmqyXsjV3wEf2h/s1Fk8kgyPRllC5haQ6qtqHj067bJsBWjC0xvvtdC7jVXbSoU79leqYb5d6W4rvaoaAHv/NIHJzkw/0255y/C7Mfh5H4vSr4UvNAetFbHgz6bAK7L2LEwPS0jhnXlWBc9GKK0CKKQ7oah5rudcQ9zaEPNXynGNbfJXe0gqPxN6kqwUlAYVxYkjk/J0whW5c4wCC2MXDYxDspzkIUEPL5jBsZhP831uStb1DWGHEpa10g78bc1ItB5t1RDpb7quHKkw4biZgWspfOPjj/YI4dctXJDZk7kVGWroSsPejsptuEiWecP236aL5HvixMCyHe1hdyC8n7g90sEgE9xgxAX7epFLNX0JRIYpOZaOvrvEuJO8pvEcAjyb0dGeCjk3o/JhMor84rtPoeNnA5GjuDC1BU9t4zCkeO8=
