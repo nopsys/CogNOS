@@ -24,7 +24,7 @@ before_script:
   - ./scripts/setupRepo.sh
 
 script:
-  # -
+  - /scripts/build.sh
 
 cache:
   ccache: true
