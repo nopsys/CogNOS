@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -e
 
+SCRIPT_PATH=`dirname $0`
+
+pushd $SCRIPT_PATH
+
 RELEASE_DIR="CogNOS" 
 if [ -d $RELEASE_DIR ]
 then
@@ -22,3 +26,5 @@ popd > /dev/null
 tar -zcvf CogNOS.tar.gz $RELEASE_DIR
 
 rm -Rf $RELEASE_DIR
+
+popd > /dev/null
