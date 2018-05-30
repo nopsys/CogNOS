@@ -33,6 +33,7 @@ image/BuildSqueakSpurTrunkVMMakerImage.st
 image/buildspurtrunkvmmaker64image.sh
 image/updatespur64image.sh
 image/getGoodSpur64VM.sh
+image/get64VMName.sh
 image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
