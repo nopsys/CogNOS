@@ -8,8 +8,6 @@ VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
 pushd $VM_DEV_DIR
 source get64VMName.sh
 
-echo $VM
-
 INFO "Generating Sources"
 if [ "$1" = "interpreter" ]    
 then
