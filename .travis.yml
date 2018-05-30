@@ -11,10 +11,12 @@ git:
 addons:
   apt:
     packages: 
+      - nasm
+      - xorriso
 
 before_install: 
 #  -
-  
+
 before_script:
   - "./scripts/setupRepo.sh"
 
