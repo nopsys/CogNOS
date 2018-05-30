@@ -5,7 +5,7 @@ source `dirname $0`/basicFunctions.inc
 BASE_DIR=".."
 NOPSYS_DIR="$BASE_DIR/opensmalltalk-vm/platforms/nopsys"
 
-./buildSources.sh
+./buildSources.sh interpreter
 
 pushd $NOPSYS_DIR
 make clean

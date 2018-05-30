@@ -11,9 +11,9 @@ source get64VMName.sh
 INFO "Generating Sources"
 if [ "$1" = "interpreter" ]    
 then
-    $VM $BASE.image ../../scripts/Smalltalk/buildInterpreterSources.st
+    $VM -headless $BASE.image ../../scripts/Smalltalk/buildInterpreterSources.st
 else  
-    $VM $BASE.image ../../scripts/Smalltalk/buildJitSources.st
+    $VM -headless $BASE.image ../../scripts/Smalltalk/buildJitSources.st
 fi
 
 OK "done"
