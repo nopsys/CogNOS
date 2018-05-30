@@ -1,0 +1,30 @@
+language: c
+
+matrix:
+  include:
+    # - os: osx
+    #  osx_image: xcode9.3
+    #  compiler: clang
+    - os: linux
+      compiler: gcc
+
+addons:
+  apt:
+    packages:
+      # - xdg-utils
+   
+before_install:
+  #- if [[ "$TRAVIS_OS_NAME" == "osx" ]]; then . ./tools/ci/before_install-osx.sh; fi
+  #- if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then . ./tools/ci/before_install-linux.sh; fi
+
+before_script:
+  - scripts/setup.sh
+
+script:
+  # -
+
+cache:
+  ccache: true
+  directories:
+    - external
+
