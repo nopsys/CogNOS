@@ -89,7 +89,11 @@ Now, we are ready for the second step, to build everything:
 
     cd ../opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
+    
+and create a bootable media file:
+
     make iso # builds libnopsys.lib, links it to vm.obj and generates a bootable ISO image
+    make hd  # builds libnopsys.lib, links it to vm.obj and generates a hard-disk image
 
 #### 5. Try it
 
@@ -108,7 +112,12 @@ is the fastest. If you want to debug Cog VM, we suggest using qemu which, while 
 is open, easy to install and lightweight. It installs with:
 
     sudo apt install qemu
-    
+
+To try it with a hard-disk image instead of a CD, call make with STORAGE=hd, like this:
+
+    make try-vmware STORAGE=hd
+
+
 ### How to debug low level problems
 
 Debugging smalltalk code is easy when you have a smalltalk browser available, but low
