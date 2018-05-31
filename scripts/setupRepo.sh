@@ -66,7 +66,13 @@ if [ ! -f "$VM_DEV_DIR/$VM_DEV_IMAGE_NAME.image" ]
 then
     pushd $VM_DEV_DIR
     INFO "Downloading Squeak image with VMMaker for VM-level development... "
-	bash buildspurtrunkvmmaker64image.sh
+	if [ "$1" = "-headless" ]
+    then
+        ARGS="$1"
+    else
+        ARGS=""
+    fi
+    bash buildspurtrunkvmmaker64image.sh $ARGS 
     OK "done"
     popd > /dev/null
 fi
@@ -75,7 +81,6 @@ if [ ! -f "$IMAGE_DIR/$IMAGE_NAME.image" ]
 then
     INFO "Downloading Pharo image with SqueakNOS code for image-level development..."
     bash newImageWithProjectLoaded.sh "Smalltalk/updateIceberg.st" "Smalltalk/loadSqueakNOSImage.st"
-    #bash installImage.sh
     OK "done"
 fi
 
