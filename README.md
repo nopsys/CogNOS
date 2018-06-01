@@ -26,6 +26,11 @@ So to run CogNOS just uncompress the file, enter the CogNOS directory and run: `
 ## Building CogNOS
 Beyond a release version we also provide support for the whole toolchain for developer. Our goals is to make this a *push one button* process. So everything that is eventually needed for building the project has already been put in the CogNOS repository.
 
+Thanks to Travis CI, all commits of this repository are tested to check that the development toolchain is working under the linux platform. We are working to do the same for OSx.
+The current build status is: [![Build Status](
+https://travis-ci.org/CogNOS/CogNOS.png)](https://travis-ci.org/CogNOS/CogNOS). If status is green and you have any problem in your setting, we suggest to search in the travis builds what you are missing. 
+
+
 ### Fetching and building artifacts
 
 To build CogNOS you will need several artifacts:
