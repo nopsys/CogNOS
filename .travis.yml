@@ -21,7 +21,7 @@ before_script:
   - "./scripts/setupRepo.sh -headless"
 
 script:
-  - "./scripts/build.sh"
+  - "./scripts/build.sh -interpreter"
   - "./scripts/Releasing/release.sh"
 
 cache:

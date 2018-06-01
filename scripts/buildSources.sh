@@ -9,7 +9,7 @@ pushd $VM_DEV_DIR
 source get64VMName.sh
 
 INFO "Generating Sources"
-if [ "$1" = "interpreter" ]    
+if [ "$1" = "-interpreter" ]    
 then
     $VM -headless $BASE.image ../../scripts/Smalltalk/buildInterpreterSources.st
 else  
