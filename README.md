@@ -15,7 +15,7 @@ Now, we are working in a second revival! Smalltalk VMs (and also images) have ch
 We have decided to give a new name to the project: CogNOS since  we do not want the project to be tightly coupled to any particular Smalltalk dialect. 
 
 ## Using CogNOS
-We provide a release version in the form of a [compressed file](releases/latest). To run it you need a virtual machine software install in your OS. Currently we provide support for:
+We provide a release version in the form of a [compressed file](../../releases/latest). To run it you need a virtual machine software install in your OS. Currently we provide support for:
 * VirtualBox
 * VMWare
 * Qemu
