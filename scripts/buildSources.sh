@@ -8,11 +8,12 @@ VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
 pushd $VM_DEV_DIR
 source get64VMName.sh
 
-INFO "Generating Sources"
-if [ "$1" = "-interpreter" ]    
+if [ "$1" = "interpreter" ]    
 then
+	INFO "Generating Interpreter Sources"
     $VM -headless $BASE.image ../../scripts/Smalltalk/buildInterpreterSources.st
 else  
+	INFO "Generating JIT Sources"
     $VM -headless $BASE.image ../../scripts/Smalltalk/buildJitSources.st
 fi
 
