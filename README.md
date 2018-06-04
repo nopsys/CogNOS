@@ -2,7 +2,7 @@
 
 This repo contains a nopsys-style version of the Cog VM. That means a Cog VM that runs a Squeak/Pharo/Cuis image without an OS. For more information on the nopsys library visit  https://github.com/nopsys/nopsys.
 
-[screenshot]: Documentation/screenshot.png
+![screenshot](Documentation/screenshot.png)
 
 CogNOS is actually a third iteration of the orginal SqueakNOS project born at early 2000's. SqueakNOS had two previous stages. 
 At a first stage, [Gerardo Richarte]() (Richie) and [Luciano Notarfrancesco]() depicted the fundamentals of the project 
