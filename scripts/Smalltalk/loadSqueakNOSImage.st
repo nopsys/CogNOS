@@ -1,7 +1,7 @@
 Author useAuthor: 'LoadSqueakNOS' during: [ 
 
 	"Based on the same file from the pharo-vm project"
-	IceCredentialsProvider useCustomSsh: true.
+	IceCredentialsProvider useCustomSsh: false.
 "	IceCredentialsProvider sshCredentials
 		publicKey: '/home/pocho/.ssh/id_rsa.pub';
 		privateKey: '/home/pocho/.ssh/id_rsa'.
@@ -12,7 +12,8 @@ Author useAuthor: 'LoadSqueakNOS' during: [
 	
     myRepository register.
 	myRepository checkoutBranch: 'master'.
-	(myRepository packageNamed: 'SqueakNOS') load.
+	(myRepository addPackageNamed: 'SqueakNOS') loadLatest.
+	"(myRepository packageNamed: 'SqueakNOS') load."
 
 ].
 
