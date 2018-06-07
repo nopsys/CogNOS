@@ -20,8 +20,9 @@ Required packages:
     export TARGET=x86_64-elf
     export PATH="$PREFIX/bin:$PATH"
     git clone --depth 1 git://git.savannah.gnu.org/grub.git
+    cd grub
     sh autogen.sh
-    cd build-grub
+    mkdir build-grub && cd build-grub
     ../configure --disable-werror TARGET_CC=$TARGET-gcc TARGET_OBJCOPY=$TARGET-objcopy \
     TARGET_STRIP=$TARGET-strip TARGET_NM=$TARGET-nm TARGET_RANLIB=$TARGET-ranlib --target=$TARGET --prefix=$PREFIX
     make
