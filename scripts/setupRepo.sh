@@ -19,7 +19,7 @@ pushd $BASE_DIR/opensmalltalk-vm/
 popd > /dev/null
 OK "Submodules initialized"
 
-INFO "Configuring Sparse checkout for the submodules"
+INFO "Configuring Sparse checkout for the open-smalltalk submodule"
 cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
 scripts/updateSCCSVersions
@@ -40,6 +40,17 @@ image/UpdateSqueakTrunkImage.st
 EOF
 
 pushd $BASE_DIR/opensmalltalk-vm/
+    git config core.sparsecheckout true
+    git read-tree -mu HEAD
+popd > /dev/null
+OK "Sparse checkout configured"
+
+INFO "Configuring Sparse checkout for the are-we-fast benchmarks submodule"
+cat > "$BASE_DIR/.git/modules/are-we-fast-yet/info/sparse-checkout" << EOF
+benchmarks/Smalltalk/*
+EOF
+
+pushd $BASE_DIR/are-we-fast-yet/
     git config core.sparsecheckout true
     git read-tree -mu HEAD
 popd > /dev/null
