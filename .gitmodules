@@ -5,6 +5,3 @@
 [submodule "nopsys"]
 	path = nopsys
 	url = https://github.com/nopsys/nopsys.git
-[submodule "are-we-fast-yet"]
-	path = are-we-fast-yet
-	url = https://github.com/charig/are-we-fast-yet.git
