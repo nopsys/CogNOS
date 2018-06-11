@@ -106,11 +106,11 @@ and create a bootable media file:
 We support _all_ main system vms available: qemu, VirtualBox, 
 VMWare and Bochs. You can even run the image with an attached gdb (through qemu)
 
-    make try-qemu    # runs it using qemu
-    make try-qemudbg # runs it using qemu attaching a gdb to debug remotely and with symbols!!!
-    make try-bochs   # runs it using bochs
-    make try-vbox    # runs it using VirtualBox
-    make try-vmware  # runs it using WMWare player
+    make try-qemu       # runs it using qemu
+    make try-qemudbg    # runs it using qemu attaching a gdb to debug remotely and with symbols!!!
+    make try-bochs      # runs it using bochs
+    make try-virtualbox # runs it using VirtualBox
+    make try-vmware     # runs it using WMWare player
 
 
 Depending on the kind of work you want to do, we suggest using different VMs. For trying it, VirtualBox
