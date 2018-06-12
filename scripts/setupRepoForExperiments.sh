@@ -41,6 +41,7 @@ image/get64VMName.sh
 image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
+mkNamedPrims.h
 EOF
 
 pushd $BASE_DIR/opensmalltalk-vm/
