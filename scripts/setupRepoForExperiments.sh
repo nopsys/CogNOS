@@ -27,7 +27,7 @@ scripts/updateSCCSVersions
 scripts/versionInfoPlist
 platforms/nopsys
 platforms/Cross
-platforms/Unix
+platforms/unix
 build.linux64x64/pharo.cog.spur
 build.linux64x64/squeak.stack.spur
 third-party/*.spec

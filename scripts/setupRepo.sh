@@ -22,7 +22,6 @@ OK "Submodules initialized"
 INFO "Configuring Sparse checkout for the open-smalltalk submodule"
 cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
-spurstack64src
 scripts/updateSCCSVersions
 scripts/versionInfoPlist
 platforms/nopsys
