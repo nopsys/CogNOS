@@ -20,13 +20,16 @@ popd > /dev/null
 OK "Submodules initialized"
 
 INFO "Configuring Sparse checkout for the open-smalltalk submodule"
-cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
+cat > "../../.git/modules/CogNOS/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
 spurstack64src
 scripts/updateSCCSVersions
 scripts/versionInfoPlist
 platforms/nopsys
 platforms/Cross
+platforms/Unix
+build.linux64x64/pharo.cog.spur
+build.linux64x64/squeak.stack.spur
 third-party/*.spec
 image/envvars.sh
 image/CogNOS Generation Workspace.text
