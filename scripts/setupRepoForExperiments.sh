@@ -30,6 +30,9 @@ platforms/Cross
 platforms/unix
 build.linux64x64/squeak.cog.spur
 build.linux64x64/squeak.stack.spur
+build.linux64x64/pharo.cog.spur
+build.linux64x64/third-party
+build.linux64x64/editpharoinstall.sh
 third-party/*.spec
 image/envvars.sh
 image/CogNOS Generation Workspace.text
