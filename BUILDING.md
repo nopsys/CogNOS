@@ -79,6 +79,7 @@ and to create a bootable media file:
 We support _all_ main system vms available: qemu, VirtualBox, 
 VMWare and Bochs. You can even run the image with an attached gdb (through qemu)
 
+    cd ../opensmalltalk-vm/platforms/nopsys (only if you are not already there)
     make try-qemu       # runs it using qemu
     make try-qemudbg    # runs it using qemu attaching a gdb to debug remotely and with symbols!!!
     make try-bochs      # runs it using bochs
