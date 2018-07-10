@@ -43,11 +43,13 @@ This script will download and configure all the needed smalltalk images and a co
 
 #### 4. Build CogNOS:
 
-Currently, this consists of two steps: 
+    bash scripts/setupRepo.sh
+
+Internally, the building consists of two steps: 
 1. Translating Slang sources to C 
 2. Build them. 
 
-For the first step you can just run `./scripts/buildSources.sh`. Alternatively, you can generate the source manually. This means open the VMMaker image from a terminal, like this:
+If you want to run them separately, for the first step you can just run `./scripts/buildSources.sh`. Alternatively, you can also generate the sources manually. This means open the VMMaker image from a terminal, like this:
 
     cd opensmalltalk-vm/image
     
@@ -62,12 +64,12 @@ You'll find a workspace there. You need to execute these two lines:
 
 If asked about overwriting files, just answer yes. You can quit the image without saving. 
 
-Now, we are ready for the second step, to build everything: 
+To build everything: 
 
     cd ../opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
     
-and create a bootable media file:
+and to create a bootable media file:
 
     make iso # builds libnopsys.lib, links it to vm.obj and generates a bootable ISO image
     make hd  # builds libnopsys.lib, links it to vm.obj and generates a hard-disk image
