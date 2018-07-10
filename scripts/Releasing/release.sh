@@ -15,7 +15,7 @@ mkdir $RELEASE_DIR
 pushd $RELEASE_DIR
 
 cp ../run.sh .
-cp ../../../nopsys/build/nopsys.iso .
+cp ../../../nopsys/build/nopsys.vmdk .
 cp ../../../nopsys/scripts/virtualbox.sh .
 
 sed -i.bak 's/build\/nopsys.iso/nopsys.iso/' virtualbox.sh 

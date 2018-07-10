@@ -9,6 +9,6 @@ NOPSYS_DIR="$BASE_DIR/opensmalltalk-vm/platforms/nopsys"
 
 pushd $NOPSYS_DIR
 make clean
-make iso    
+make hd    
 popd > /dev/null
 
