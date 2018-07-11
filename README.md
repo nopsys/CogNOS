@@ -34,7 +34,7 @@ If you want to build everything from scratch, we provide a few scripts that make
 There are two ways of contributing. At the image level or at the VM level.
 
 ### Image-level contributions
-This is the standard way of contributing. Usually most users will work only at the image level. If all your contributions live at the image side then you could just make a pull request of smalltalk code to the SqueakNOS repository. Note that by default, the official nopsys git repository is configured in the Iceberg git tool. You should update that to your own clone to be able to push and then submit a pull request.
+This is the standard way of contributing. Usually most users will work only at the image level. If all your contributions live at the image side then you could just make a pull request of smalltalk code to the [SmalltalkNOS repository](https://github.com/nopsys/SmalltalkNOS). Note that the SmalltalkNOS repository inside the development image is already loaded and pointing to the official repository. You should update that to your fork to be able to push and then submit a pull request.
 
 ### VM-level contributions
 
