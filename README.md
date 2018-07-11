@@ -27,7 +27,7 @@ So to run CogNOS just uncompress the file, enter the CogNOS directory and run: `
 
 ## Building
 
-If you want to build everything from scratch, we have made it easy with the help of a few scripts. Just have a look at [BUILDING.md](BUILDING.md) for instructions.
+If you want to build everything from scratch, we provide a few scripts that make it easy. Go to [BUILDING.md](BUILDING.md) for instructions.
     
 ## Contributing
 
