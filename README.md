@@ -48,9 +48,9 @@ So to open the image and generate the sources see the previous section #4. Build
 
     ./buildSpurTrunk64Image.sh-->
 
-### How to collaborate
+### Issue Tracker
 
-Have a look at CogNOS issues tracker on GitHub, we've left many tasks with different degrees of complexity.
+Alternatively, you can pick any issue from the CogNOS issues tracker on GitHub. There are many tasks with different degrees of complexity that need to be solved.
 
 <!--
 ### Things to figure out if you have time: 
