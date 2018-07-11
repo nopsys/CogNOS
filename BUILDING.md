@@ -45,7 +45,8 @@ This script will download and configure all the needed smalltalk images and a co
 
     bash scripts/setupRepo.sh
 
-Internally, the building consists of two steps: 
+If you have any problem with the command you can try to do this step manually. The building consists of two steps: 
+
 1. Translating Slang sources to C 
 2. Build them. 
 
