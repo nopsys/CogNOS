@@ -50,7 +50,7 @@ If you have any problem with the command you can try to do this step manually. T
 1. Translating Slang sources to C 
 2. Build them. 
 
-If you want to run them separately, for the first step you can just run `./scripts/buildSources.sh`. Alternatively, you can also generate the sources manually. This means open the VMMaker image from a terminal, like this:
+For the first step you can just run `./scripts/buildSources.sh`. Alternatively, you can also generate the sources manually. This means open the VMMaker image from a terminal, like this:
 
     cd opensmalltalk-vm/image
     
