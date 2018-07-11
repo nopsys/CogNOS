@@ -55,7 +55,7 @@ For the first step you can just run `./scripts/buildSources.sh`. Alternatively, 
     cd opensmalltalk-vm/image
     
     ./sqlinux.201805090836/squeak BuildCogNOS.image (on linux)
-or
+    or
     ./Squeak64.201805090836.app/Contents/MacOS/Squeak (on OSX)
 
 You'll find a workspace there. You need to execute these two lines:
