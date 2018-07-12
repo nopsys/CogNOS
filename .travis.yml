@@ -13,6 +13,7 @@ addons:
     packages: 
       - nasm
       - xorriso
+      - mtools
 
 before_install: 
 #  -
