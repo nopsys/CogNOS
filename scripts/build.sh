@@ -10,7 +10,7 @@ NOPSYS_DIR="$BASE_DIR/opensmalltalk-vm/platforms/nopsys"
 
 pushd $NOPSYS_DIR
 make clean
-if [[ -z $VERSION | $VERSION == "HD" ]]
+if [[ -z "$VERSION" ] || [ "$VERSION" == "HD" ]]
 then
     make hd
 else
