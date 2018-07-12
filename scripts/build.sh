@@ -7,8 +7,14 @@ NOPSYS_DIR="$BASE_DIR/opensmalltalk-vm/platforms/nopsys"
 
 ./buildSources.sh $@
 
+
 pushd $NOPSYS_DIR
 make clean
-make hd    
+if [[ -z $VERSION | $VERSION == "HD" ]]
+then
+    make hd
+else
+    make iso
+fi
 popd > /dev/null
 

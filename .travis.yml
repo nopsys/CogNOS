@@ -4,6 +4,10 @@ matrix:
   include:
   - os: linux
     compiler: gcc
+    env: VERSION="ISO"
+  - os: linux
+    compiler: gcc
+    env: VERSION="HD"
 
 git:
   submodules: false

@@ -15,7 +15,12 @@ mkdir $RELEASE_DIR
 pushd $RELEASE_DIR
 
 cp ../run.sh .
-cp ../../../nopsys/build/nopsys.vmdk .
+if [[ -z $VERSION | $VERSION == "HD" ]]
+then
+  cp ../../../nopsys/build/nopsys.vmdk .
+else
+  cp ../../../nopsys/build/nopsys.iso .
+fi
 cp ../../../nopsys/scripts/virtualbox.sh .
 
 sed -i.bak 's/build\/nopsys.iso/nopsys.iso/' virtualbox.sh 
