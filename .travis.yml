@@ -21,6 +21,8 @@ before_install:
 before_script:
   - "./scripts/setupRepo.sh -headless"
 
+sudo: enabled
+
 script:
   - "./scripts/build.sh"
   - "./scripts/Releasing/release.sh"
