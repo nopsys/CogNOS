@@ -15,7 +15,7 @@ mkdir $RELEASE_DIR
 pushd $RELEASE_DIR
 
 cp ../run.sh .
-if [[ -z "$VERSION" ] || [ "$VERSION" == "HD" ]]
+if [[ -z "$VERSION"  ||  "$VERSION" == "HD" ]]
 then
   cp ../../../nopsys/build/nopsys.vmdk .
 else
