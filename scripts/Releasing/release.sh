@@ -14,7 +14,7 @@ fi
 mkdir $RELEASE_DIR
 pushd $RELEASE_DIR
 
-$version=y=${VERSION,,}
+$version=${VERSION,,}
 
 cp ../run-$version.sh .
 if [[ -z "$VERSION"  ||  "$VERSION" == "HD" ]]
