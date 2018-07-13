@@ -12,8 +12,10 @@ pushd $NOPSYS_DIR
 make clean
 if [[ -z "$VERSION"  ||  "$VERSION" == "HD" ]]
 then
+    make build/vmware.hd.vmx
     make hd
 else
+    make build/vmware.cd.vmx
     make iso
 fi
 popd > /dev/null
