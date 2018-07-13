@@ -24,11 +24,12 @@ fi
 
 if [[ -z $1 || $1 = "vbox" ]]
 then
-    RELEASE=release ./virtualbox.sh 
+    RELEASE=release ./virtualbox.sh hd 
 else 
-    if [ $1 = "qemu" ]
-    then
-        qemu-system-x86_64 -boot d -cdrom nopsys.iso -m 512
+    if [ $1 = "qemu" ]; then
+        qemu-system-x86_64 -boot d -hda nopsys.vmdk -m 512
+    elif [ $1 = "vmware" ]; then
+    	vmplayer vmware.hd.vmx
     else 
         ERR "Unsupported option $1. Supported options for running CogNOS are only 'vbox' or 'qemu'"
     fi
