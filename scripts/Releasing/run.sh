@@ -24,7 +24,7 @@ fi
 
 if [[ -z $1 || $1 = "vbox" ]]
 then
-    RELEASE=release ./virtualbox.sh hd 
+    RELEASE=release ./scripts/virtualbox.sh VBOX_FILENAME 
 else 
     if [ $1 = "qemu" ]; then
         qemu-system-x86_64 -boot d -hda nopsys.vmdk -m 512
