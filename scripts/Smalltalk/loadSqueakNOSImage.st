@@ -12,8 +12,8 @@ Author useAuthor: 'LoadSqueakNOS' during: [
 	
     myRepository register.
 	myRepository checkoutBranch: 'master'.
-	(myRepository addPackageNamed: 'SqueakNOS') loadLatest.
-	"(myRepository packageNamed: 'SqueakNOS') load."
+	"(myRepository addPackageNamed: 'SqueakNOS') loadLatest."
+	(myRepository packageNamed: 'SqueakNOS') load.
 
 ].
 
