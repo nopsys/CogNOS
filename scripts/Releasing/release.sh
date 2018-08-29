@@ -37,8 +37,8 @@ else
 fi
 
 cp ../run.sh .
-sed -i .bak "s/RELEASE=release/RELEASE=$RELEASE/g" run.sh
-sed -i .bak "s/VBOX_FILENAME/$BUNDLES_DIR\/$VBOX_FILENAME/g" run.sh
+sed -i.bak "s/RELEASE=release/RELEASE=$RELEASE/g" run.sh
+sed -i.bak "s/VBOX_FILENAME/$BUNDLES_DIR\/$VBOX_FILENAME/g" run.sh
 rm run.sh.bak
 
 mkdir $SCRIPTS_DIR
