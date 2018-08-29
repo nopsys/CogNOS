@@ -2,7 +2,7 @@
 We provide support for building the whole toolchain needed for development: everything that is eventually needed for building any version of the project should be available after following this instructions.
 
 Thanks to Travis CI, all commits of this repository are tested to check that the development toolchain is working under the linux platform. We are working to do the same for OSx.
-The current build status is: [![Build Status](https://travis-ci.org/nopsys/CogNOS.svg?branch=master)](https://travis-ci.org/CogNOS/CogNOS). If status is *passing* and you have any problem in your setting, we suggest to search in the travis builds what you are missing. 
+The current build status is: [![Build Status](https://travis-ci.org/nopsys/CogNOS.svg?branch=master)](https://travis-ci.org/CogNOS/CogNOS). If status is *passing* and you have any problem in your setting it may happen you are missing some dependencies. We suggest to search in the travis builds for the whole needed setup. 
 
 ### Fetching and building artifacts
 
