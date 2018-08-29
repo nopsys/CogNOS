@@ -1,8 +1,14 @@
 #!/usr/bin/env bash
 
-source `dirname $0`/basicFunctions.inc
+SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+if [ ! -d $SCRIPT_PATH ]; then
+    echo "Could not determine absolute dir of $0"
+    echo "Maybe accessed with symlink"
+fi
 
-BASE_DIR=".."
+source $SCRIPT_PATH/basicFunctions.inc
+
+BASE_DIR="$SCRIPT_PATH/.."
 IMAGE_DIR="$BASE_DIR/image"
 THIRD_PARTY_DIR="$BASE_DIR/opensmalltalk-vm/third-party/"
 OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
