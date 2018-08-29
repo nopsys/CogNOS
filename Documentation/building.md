@@ -24,6 +24,7 @@ The CogNOS repo contains the scripts that will download all other artifacts.
 
 #### 2. Setup the repo, both for building and development:
 
+    cd CogNOS (or the name you chose)
     bash scripts/setupRepo.sh
     
 This script will download and configure all the needed smalltalk images and a compiled VM to run them.
