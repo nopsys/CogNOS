@@ -26,7 +26,7 @@ So to run CogNOS just uncompress the file, enter the CogNOS directory and run: `
 
 ## Building
 
-If you want to build everything from scratch, we provide a few scripts that make it easy. Go to [Documentation/BUILDING.md](building.md) for instructions.
+If you want to build everything from scratch, we provide a few scripts that make it easy. [Follow the documentation for instructions](Documentation/BUILDING.md).
 
 ## Examples
 Below an image illustrating a CogNOS Pharo image running on top of virtual box. The transcript shows all the device drivers that were initialized at loading time.
