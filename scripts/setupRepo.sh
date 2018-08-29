@@ -86,7 +86,7 @@ fi
 if [ ! -f "$IMAGE_DIR/$IMAGE_NAME.image" ]
 then
     INFO "Downloading Pharo image with SqueakNOS code for image-level development..."
-    bash newImageWithProjectLoaded.sh "Smalltalk/updateIceberg.st" "Smalltalk/loadSqueakNOSImage.st"
+    bash $SCRIPT_PATH/newImageWithProjectLoaded.sh "Smalltalk/updateIceberg.st" "Smalltalk/loadSqueakNOSImage.st"
     OK "done"
 fi
 
