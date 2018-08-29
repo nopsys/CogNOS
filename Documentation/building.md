@@ -8,7 +8,8 @@ The current build status is: [![Build Status](https://travis-ci.org/nopsys/CogNO
 
 To build CogNOS you will need several artifacts:
 
-- the sources of a slightly modified `opensmalltalk-vm` containing `nopsys` library and the needed adaptations to link Cog to nopsys.
+- the [nopsys](https://github.com/nopsys/nopsys) library sources.
+- the sources of a slightly modified `opensmalltalk-vm` containing adaptations needed to link Cog to the nopsys library.
 - a `64-bit spur squeak/pharo/cuis NOS` image that contains the "OS" drivers and will act as the OS when linked to nopsys. 
 - a `64-bit squeak vmmaker image` containing all the VM sources written in Slang (including the SqueakNOS plugin) that need to be translated to C before building the final VM.
 - a `64-bit cog vm` to run the image for generating the sources.
@@ -24,6 +25,9 @@ The CogNOS repo contains the scripts that will download all other artifacts.
 
 #### 2. Setup the repo, both for building and development:
 
+Note that this step may take around 1-5 minutes to finish. 
+
+    cd CogNOS (or the name you chose)
     bash scripts/setupRepo.sh
     
 This script will download and configure all the needed smalltalk images and a compiled VM to run them.
@@ -37,7 +41,7 @@ This script will download and configure all the needed smalltalk images and a co
 
 #### 4. Build CogNOS:
 
-    bash scripts/setupRepo.sh
+    bash scripts/build.sh
 
 If you have any problem with the command you can try to do this step manually. The building consists of two steps: 
 
