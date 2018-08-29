@@ -28,6 +28,7 @@ OK "Submodules initialized"
 INFO "Configuring Sparse checkout for the open-smalltalk submodule"
 cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
 spur64src
+spurstack64src
 scripts/updateSCCSVersions
 scripts/versionInfoPlist
 platforms/nopsys
@@ -44,6 +45,18 @@ image/getlatesttrunk64image.sh
 image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
 EOF
+
+if [ "$1" = "--includeUnix" ]
+then
+    cat >> "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
+platforms/unix
+build.linux64x64/squeak.cog.spur
+build.linux64x64/squeak.stack.spur
+build.linux64x64/pharo.cog.spur
+build.linux64x64/third-party
+build.linux64x64/editpharoinstall.sh
+EOF
+fi
 
 pushd $BASE_DIR/opensmalltalk-vm/
     git config core.sparsecheckout true
