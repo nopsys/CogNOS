@@ -34,7 +34,7 @@ ThemeIcons current: ThemeIcons loadDefault.
 "load iceberg"
 Metacello new
   	baseline: 'Iceberg';
-  	repository: 'github://pharo-vcs/iceberg:v1.1.1';
+  	repository: 'github://pharo-vcs/iceberg:v1.2.2';
 	onWarningLog;
   	load.
       
