@@ -2,10 +2,6 @@
 
 set -e  # exit on error
 
-SCRIPT_PATH=`dirname $0`
-
-cd $SCRIPT_PATH
-
 # set up color commands
 if [ -t 1 -a -t 2 -a \( `type -t tput` = "file" \) ]; then
   _colors=`tput colors`
