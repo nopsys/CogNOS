@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
-source `dirname $0`/basicFunctions.inc
+SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+if [ ! -d $SCRIPT_PATH ]; then
+    echo "Could not determine absolute dir of $0"
+    echo "Maybe accessed with symlink"
+fi
 
-./newImage.sh
+source $SCRIPT_PATH/basicFunctions.inc
 
-IMAGE_DIR="../image"
-cd $IMAGE_DIR
+$SCRIPT_PATH/newImage.sh
+
+IMAGE_DIR="$SCRIPT_PATH/../image"
+pushd $IMAGE_DIR
 
 INFO "LOADING PROJECT INTO IMAGE"
 SCRIPTS=""
@@ -18,5 +24,4 @@ done
 
 rm Pharo.image
 rm Pharo.changes
-
-
+popd > /dev/null

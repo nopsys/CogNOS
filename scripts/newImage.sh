@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
 #Based on the same file from pharo-vm project
+SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+if [ ! -d $SCRIPT_PATH ]; then
+    echo "Could not determine absolute dir of $0"
+    echo "Maybe accessed with symlink"
+fi
 
-source `dirname $0`/basicFunctions.inc
+source $SCRIPT_PATH/basicFunctions.inc
 
 #Threaded Heartbeat VMs do not work on OSX 
 VM="vm61"
-IMAGE_DIR="../image"
-
+IMAGE_DIR="$SCRIPT_PATH/../image"
 mkdir -p $IMAGE_DIR
-cd $IMAGE_DIR
+pushd $IMAGE_DIR
 
 if [ ! -f Pharo.image ]
   then
@@ -28,5 +32,4 @@ if [ ! -f pharo ]
 else
   INFO "VM for Pharo already present, skipping download"
 fi
-
-
+popd > /dev/null
