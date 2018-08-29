@@ -25,6 +25,8 @@ The CogNOS repo contains the scripts that will download all other artifacts.
 
 #### 2. Setup the repo, both for building and development:
 
+Note that this step may take around 1-5 minutes to finish. 
+
     cd CogNOS (or the name you chose)
     bash scripts/setupRepo.sh
     
