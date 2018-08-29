@@ -1,8 +1,6 @@
 # CogNOS in a nutshell
 
-This repo contains a nopsys-style version of the Cog VM. That means a Cog VM that runs a Squeak/Pharo/Cuis image without an OS. For more information on the nopsys library visit  https://github.com/nopsys/nopsys.
-
-![screenshot](Documentation/screenshot.png)
+This repo contains a nopsys-style version of the Cog VM. That means a Cog VM that runs a Squeak/Pharo/Cuis image without an OS. For more information on the nopsys library visit [its own repo](https://github.com/nopsys/nopsys).
 
 CogNOS is actually a third iteration of the orginal SqueakNOS project born at early 2000's. SqueakNOS had two previous stages. 
 At a first stage, [Gerardo Richarte]() (Richie) and [Luciano Notarfrancesco]() depicted the fundamentals of the project 
@@ -14,7 +12,6 @@ In a second stage, during 2011-2012, [Javier Pimás](https://github.com/melkyade
 Now, we are working in a second revival! Smalltalk VMs (and also images) have changed a lot since the old times. 
 We have decided to give a new name to the project: CogNOS since  we do not want the project to be tightly coupled to any particular Smalltalk dialect. 
 
-![CogNOS booting in QEMU answering ping](Documentation/screenshot-ICMP.png)
 
 ## Using CogNOS
 We provide a release version in the form of a [compressed file](../../releases/latest). To run it you need a virtual machine software install in your OS. Currently we provide support for:
@@ -29,8 +26,15 @@ So to run CogNOS just uncompress the file, enter the CogNOS directory and run: `
 
 ## Building
 
-If you want to build everything from scratch, we provide a few scripts that make it easy. Go to [BUILDING.md](BUILDING.md) for instructions.
-    
+If you want to build everything from scratch, we provide a few scripts that make it easy. Go to [Documentation/BUILDING.md](building.md) for instructions.
+
+## Examples
+Below an image illustrating a CogNOS Pharo image running on top of virtual box. The transcript shows all the device drivers that were initialized at loading time.
+![screenshot](Documentation/screenshot.png)
+
+Below an example from Richie: a CogNos Pharo image on top of QEMU running ping.
+![CogNOS booting in QEMU answering ping](Documentation/screenshot-ICMP.png)
+
 ## Contributing
 
 There are two ways of contributing. At the image level or at the VM level.
