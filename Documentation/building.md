@@ -8,7 +8,8 @@ The current build status is: [![Build Status](https://travis-ci.org/nopsys/CogNO
 
 To build CogNOS you will need several artifacts:
 
-- the sources of a slightly modified `opensmalltalk-vm` containing `nopsys` library and the needed adaptations to link Cog to nopsys.
+- the [nopsys](https://github.com/nopsys/nopsys) library sources.
+- the sources of a slightly modified `opensmalltalk-vm` containing adaptations needed to link Cog to the nopsys library.
 - a `64-bit spur squeak/pharo/cuis NOS` image that contains the "OS" drivers and will act as the OS when linked to nopsys. 
 - a `64-bit squeak vmmaker image` containing all the VM sources written in Slang (including the SqueakNOS plugin) that need to be translated to C before building the final VM.
 - a `64-bit cog vm` to run the image for generating the sources.
