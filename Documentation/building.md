@@ -41,7 +41,7 @@ This script will download and configure all the needed smalltalk images and a co
 
 #### 4. Build CogNOS:
 
-    bash scripts/buildSources.sh
+    bash scripts/build.sh
 
 If you have any problem with the command you can try to do this step manually. The building consists of two steps: 
 
