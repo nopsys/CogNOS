@@ -66,3 +66,6 @@ Alternatively, you can pick any issue from the CogNOS issues tracker on GitHub. 
  - When opening a Pharo 6 image a message window says it is an old VM, but things seem to work. We need to check what's the problem there.
  -->
 
+## Papers
+
+- [Self-Contained Development Environments (DLS'18)]()
