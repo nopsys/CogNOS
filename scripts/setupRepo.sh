@@ -25,8 +25,16 @@ pushd $BASE_DIR/opensmalltalk-vm/
 popd > /dev/null
 OK "Submodules initialized"
 
+if [[ "$@" == "-includeUnix" ]]
+then
+    # CogNOS is a submoudle. TODO: Find the first .git parent directory
+    GIT_OPENST="$BASE_DIR/../.git/modules/CogNOS/modules/opensmalltalk-vm/info/sparse-checkout"
+else
+    GIT_OPENST="$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout"
+fi
+
 INFO "Configuring Sparse checkout for the open-smalltalk submodule"
-cat > "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
+cat > "$GIT_OPENST" << EOF
 spur64src
 spurstack64src
 scripts/updateSCCSVersions
@@ -46,9 +54,10 @@ image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
 EOF
 
-if [ "$1" = "--includeUnix" ]
+
+if [[ "$@" == "-includeUnix" ]]
 then
-    cat >> "$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout" << EOF
+    cat >> "$GIT_OPENST" << EOF
 platforms/unix
 build.linux64x64/squeak.cog.spur
 build.linux64x64/squeak.stack.spur
@@ -85,9 +94,9 @@ if [ ! -f "$VM_DEV_DIR/$VM_DEV_IMAGE_NAME.image" ]
 then
     pushd $VM_DEV_DIR
     INFO "Downloading Squeak image with VMMaker for VM-level development... "
-	if [ "$1" = "-headless" ]
+	if [[ "$@" == "-headless" ]]
     then
-        ARGS="$1"
+        ARGS="-headless"
     else
         ARGS=""
     fi
