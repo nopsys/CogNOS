@@ -4,6 +4,9 @@ We provide support for building the whole toolchain needed for development: ever
 Thanks to Travis CI, all commits of this repository are tested to check that the development toolchain is working under the linux platform. We are working to do the same for OSx.
 The current build status is: [![Build Status](https://travis-ci.org/nopsys/CogNOS.svg?branch=master)](https://travis-ci.org/CogNOS/CogNOS). If status is *passing* and you have any problem in your setting it may happen you are missing some dependencies. We suggest to search in the travis builds for the whole needed setup. 
 
+### macOS
+We currently do not provide support building CogNOS under the macOS platform. However, we do it by using a cross-compiler. if If you want to give a try, [here](buildOSx.md) you will find instructions on how we build and setup a cross-compiler.  
+
 ### Fetching and building artifacts
 
 To build CogNOS you will need several artifacts:
