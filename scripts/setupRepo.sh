@@ -39,20 +39,17 @@ then
     OK "Openlibm ok"
 fi
 
-if [ ! -f "$VM_DEV_DIR/$VM_DEV_IMAGE_NAME.image" ]
+INFO "Checking for latest Squeak image with VMMaker for VM-level development... "
+pushd $VM_DEV_DIR
+if [[ "$@" == "-headless" ]]
 then
-    pushd $VM_DEV_DIR
-    INFO "Downloading Squeak image with VMMaker for VM-level development... "
-	if [[ "$@" == "-headless" ]]
-    then
-        ARGS="-headless"
-    else
-        ARGS=""
-    fi
-    bash buildspurtrunkvmmaker64image.sh $ARGS 
-    OK "done"
-    popd > /dev/null
+    ARGS="-headless"
+else
+    ARGS=""
 fi
+bash $SCRIPT_PATH/opensmalltalk/buildspurtrunkvmmaker64image.sh $ARGS 
+OK "done"
+popd > /dev/null
 
 if [ ! -f "$IMAGE_DIR/$IMAGE_NAME.image" ]
 then
