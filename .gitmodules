@@ -1,7 +1,3 @@
-[submodule "opensmalltalk-vm"]
-	path = opensmalltalk-vm
-	url = https://github.com/nopsys/opensmalltalk-vm
-	shallow = true
 [submodule "nopsys"]
 	path = nopsys
 	url = https://github.com/nopsys/nopsys.git

@@ -8,70 +8,19 @@ fi
 
 source $SCRIPT_PATH/basicFunctions.inc
 
-BASE_DIR="$SCRIPT_PATH/.."
-IMAGE_DIR="$BASE_DIR/image"
-THIRD_PARTY_DIR="$BASE_DIR/opensmalltalk-vm/third-party/"
-OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
-VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
-VM_DEV_IMAGE_NAME="BuildCogNOS"
-IMAGE_NAME="SqueakNOS"
 
 INFO "Initializing submodules"
 pushd $BASE_DIR
-    load_submodule
+    load_all_submodules
 popd > /dev/null
 pushd $BASE_DIR/opensmalltalk-vm/
     ./scripts/updateSCCSVersions
 popd > /dev/null
 OK "Submodules initialized"
 
-if [[ "$@" == "-includeUnix" ]]
-then
-    # CogNOS is a submoudle. TODO: Find the first .git parent directory
-    GIT_OPENST="$BASE_DIR/../.git/modules/CogNOS/modules/opensmalltalk-vm/info/sparse-checkout"
-else
-    GIT_OPENST="$BASE_DIR/.git/modules/opensmalltalk-vm/info/sparse-checkout"
-fi
-
-INFO "Configuring Sparse checkout for the open-smalltalk submodule"
-cat > "$GIT_OPENST" << EOF
-spur64src
-spurstack64src
-scripts/updateSCCSVersions
-scripts/versionInfoPlist
-platforms/nopsys
-platforms/Cross
-third-party/*.spec
-image/envvars.sh
-image/CogNOS Generation Workspace.text
-image/BuildSqueakSpurTrunkVMMakerImage.st
-image/buildspurtrunkvmmaker64image.sh
-image/updatespur64image.sh
-image/getGoodSpur64VM.sh
-image/get64VMName.sh
-image/getlatesttrunk64image.sh
-image/NukePreferenceWizardMorph.st
-image/UpdateSqueakTrunkImage.st
-EOF
-
-
-if [[ "$@" == "-includeUnix" ]]
-then
-    cat >> "$GIT_OPENST" << EOF
-platforms/unix
-build.linux64x64/squeak.cog.spur
-build.linux64x64/squeak.stack.spur
-build.linux64x64/pharo.cog.spur
-build.linux64x64/third-party
-build.linux64x64/editpharoinstall.sh
-EOF
-fi
-
-pushd $BASE_DIR/opensmalltalk-vm/
-    git config core.sparsecheckout true
-    git read-tree -mu HEAD
+pushd $BASE_DIR
+	$SCRIPT_PATH/checkoutOpenSmalltalk.sh
 popd > /dev/null
-OK "Sparse checkout configured"
 
 INFO "Checking whether a compilation config exists (and creating a default one if not)"
 if [ ! -f $BASE_DIR/nopsys/compilation.conf ]

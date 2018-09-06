@@ -2,6 +2,25 @@
 
 set -e  # exit on error
 
+BASE_DIR="$SCRIPT_PATH/.."
+IMAGE_DIR="$BASE_DIR/image"
+THIRD_PARTY_DIR="$BASE_DIR/opensmalltalk-vm/third-party/"
+OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
+VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
+VM_DEV_IMAGE_NAME="BuildCogNOS"
+IMAGE_NAME="SqueakNOS"
+
+# Find .git directory. If using CogNOS repo as a submodule it will be the parent, if not
+# then it is just the one at base dir. TODO: Find the first .git parent directory
+
+if [ -d $BASE_DIR/../.git/modules/CogNOS]
+then
+    GIT_DIR="$BASE_DIR/../.git"
+else
+    GIT_DIR="$BASE_DIR/.git"
+fi
+
+
 # set up color commands
 if [ -t 1 -a -t 2 -a \( `type -t tput` = "file" \) ]; then
   _colors=`tput colors`
@@ -49,11 +68,16 @@ function check_for_tools() {
   OK ok.
 }
 
+# no args loads all submodules
 function load_submodule() {
   INFO Load "$1"
   git submodule init $1
   git submodule sync $1
   git submodule update $1
+}
+
+function load_all_submodules() {
+	load_submodule
 }
 
 function check_for() {
