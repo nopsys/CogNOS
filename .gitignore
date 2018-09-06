@@ -1,3 +1,5 @@
 VMMaker/*
 image/*
 scripts/Releasing/CogNOS.tar.gz
+third-party
+opensmalltalk-vm
