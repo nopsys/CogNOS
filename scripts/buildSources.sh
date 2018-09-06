@@ -9,9 +9,6 @@ fi
 
 source $SCRIPT_PATH/basicFunctions.inc
 
-BASE_DIR="$SCRIPT_PATH/.."
-VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
-
 pushd $VM_DEV_DIR
 source get64VMName.sh
 

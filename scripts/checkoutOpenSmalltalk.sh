@@ -1,4 +1,6 @@
-SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+#!/bin/bash
+
+	SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 if [ ! -d $SCRIPT_PATH ]; then
     echo "Could not determine absolute dir of $0"
     echo "Maybe accessed with symlink"
@@ -16,13 +18,9 @@ then
 	cd opensmalltalk-vm
 	git init
 	git config core.sparseCheckout true
-	GIT_SPARSE=.git/modules/CogNOS/modules/opensmalltalk-vm/info/sparse-checkout
-else
-	cd opensmalltalk-vm
-fi
-
-INFO "Configuring Sparse checkout for the open-smalltalk submodule"
-cat > "$GIT_SPARSE" << EOF
+	GIT_SPARSE=.git/info/sparse-checkout
+	touch $GIT_SPARSE
+	cat > "$GIT_SPARSE" << EOF
 spur64src
 spurstack64src
 scripts/updateSCCSVersions
@@ -41,10 +39,10 @@ image/NukePreferenceWizardMorph.st
 image/UpdateSqueakTrunkImage.st
 EOF
 
-if [[ "$OSTYPE" == "darwin"* ]]; then
-	INFO "running on mac, skipping linux stuff from checkout"
-else
-    cat >> "$GIT_SPARSE" << EOF
+	if [[ "$OSTYPE" == "darwin"* ]]; then
+		INFO "running on mac, skipping linux stuff from checkout"
+	else
+		cat >> "$GIT_SPARSE" << EOF
 platforms/unix
 build.linux64x64/squeak.cog.spur
 build.linux64x64/squeak.stack.spur
@@ -52,15 +50,22 @@ build.linux64x64/pharo.cog.spur
 build.linux64x64/third-party
 build.linux64x64/editpharoinstall.sh
 EOF
-fi
+	fi
 
-git remote add origin git@github.com:OpenSmalltalk/opensmalltalk-vm.git
-git fetch --depth 1 origin Cog
-git checkout Cog
+	git remote add origin git@github.com:OpenSmalltalk/opensmalltalk-vm.git
+	git fetch --depth 1 origin Cog
+	git checkout Cog
+else
+	INFO "opensmalltalk-vm directory exists. Just pulling the latest changes"
+	
+	cd opensmalltalk-vm
+	git pull origin Cog
+fi
 
 OK "Sparse checkout configured"
 
 INFO "Now checking out latest version of nopsys platform"
+pwd
 if [ -d "platforms/nopsys" ]
 then
 	INFO "nopsys platform exists! pulling latest version"
@@ -68,7 +73,7 @@ then
 	git pull origin master
 else
 	INFO "nopsys platform doesn't exist, cloning it"
-	git checkout git@github.com:nopsys/nopsysCog.git opensmalltalk-vm/platforms/nopsys
+	git clone git@github.com:nopsys/nopsysCog.git platforms/nopsys
 fi
 
 

@@ -10,16 +10,6 @@ VM_DEV_DIR="$BASE_DIR/opensmalltalk-vm/image"
 VM_DEV_IMAGE_NAME="BuildCogNOS"
 IMAGE_NAME="SqueakNOS"
 
-# Find .git directory. If using CogNOS repo as a submodule it will be the parent, if not
-# then it is just the one at base dir. TODO: Find the first .git parent directory
-
-if [ -d $BASE_DIR/../.git/modules/CogNOS]
-then
-    GIT_DIR="$BASE_DIR/../.git"
-else
-    GIT_DIR="$BASE_DIR/.git"
-fi
-
 
 # set up color commands
 if [ -t 1 -a -t 2 -a \( `type -t tput` = "file" \) ]; then
