@@ -15,8 +15,8 @@ source "$SCRIPTS_DIR/basicFunctions.inc"
 pushd $VM_DEV_DIR
     source get64VMName.sh
     INFO "Generating Both Interpreter and JIT Sources"
-    $VM -headless $VM_DEV_IMAGE_NAME "$ST_IMAGE_INIT_SCRIPTS_DIR/Smalltalk/buildInterpreterSources.st"
-    $VM -headless $VM_DEV_IMAGE_NAME "ST_IMAGE_INIT_SCRIPTS_DIR/buildJitSources.st"
+    $VM -headless $VM_DEV_IMAGE_NAME "$ST_IMAGE_INIT_SCRIPTS_DIR/buildInterpreterSources.st"
+    $VM -headless $VM_DEV_IMAGE_NAME "$ST_IMAGE_INIT_SCRIPTS_DIR/buildJitSources.st"
     OK "done"
 popd
 
