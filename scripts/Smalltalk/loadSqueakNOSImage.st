@@ -12,7 +12,7 @@ Author useAuthor: 'LoadSqueakNOS' during: [
 	(myRepository packageNamed: 'Net') load.
 ].
 
-(Smalltalk saveAs: (Smalltalk imageDirectory asFileReference) / 'SqueakNOS' )
+(Smalltalk saveAs: (Smalltalk imageDirectory asFileReference) / 'CogNos.image' )
     ifFalse: [ Smalltalk snapshot: false andQuit: true ].
 
 

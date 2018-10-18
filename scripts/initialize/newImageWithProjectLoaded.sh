@@ -6,11 +6,13 @@ if [ ! -d $SCRIPT_PATH ]; then
     echo "Maybe accessed with symlink"
 fi
 
-source $SCRIPT_PATH/basicFunctions.inc
+BASE_DIR="$SCRIPT_PATH/../.."
 
-$SCRIPT_PATH/newImage.sh
+source "$BASE_DIR/scripts/config.inc"
+source "$SCRIPTS_DIR/basicFunctions.inc"
 
-IMAGE_DIR="$SCRIPT_PATH/../image"
+$INIT_SCRIPTS_DIR/newImage.sh
+
 pushd $IMAGE_DIR
 
 INFO "LOADING PROJECT INTO IMAGE"
@@ -24,4 +26,4 @@ done
 
 rm Pharo.image
 rm Pharo.changes
-popd > /dev/null
+popd 

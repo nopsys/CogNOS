@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 set -e
-SCRIPT_PATH=`dirname $0`
-BUNDLES_DIR="bundles"
-SCRIPTS_DIR="scripts"
+
+SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
+if [ ! -d $SCRIPT_PATH ]; then
+    echo "Could not determine absolute dir of $0"
+    echo "Maybe accessed with symlink"
+fi
+
+BASE_DIR="$SCRIPT_PATH/../.."
+
+source "$BASE_DIR/scripts/config.inc"
+source "$SCRIPTS_DIR/basicFunctions.inc"
 
 TAG=`git describe --tags --exact-match 2>/dev/null || echo "false"`
 if [ $TAG = "false" ] ; then
@@ -11,46 +19,40 @@ else
     RELEASE=$TAG
 fi
 
-pushd $SCRIPT_PATH
-RELEASE_DIR="CogNOS" 
 if [ -d $RELEASE_DIR ]
 then
   rm -Rf $RELEASE_DIR
+else
+  mkdir $RELEASE_DIR
 fi
+mkdir $BUNDLES_DIR
 
-mkdir $RELEASE_DIR
 pushd $RELEASE_DIR
 
-#version=${VERSION,,}
-
-mkdir $BUNDLES_DIR
 if [[ -z "$VERSION"  ||  "$VERSION" == "HD" ]]
 then
-  echo `pwd`
-  cp ../../../nopsys/build/nopsys.vmdk $BUNDLES_DIR/
-  cp ../../../nopsys/build/vmware.hd.vmx $BUNDLES_DIR/
+  cp "$BUILD_DIR/nopsys.vmdk" "$BUNDLES_DIR"
+  cp "$BUILD_DIR//vmware.hd.vmx" "$BUNDLES_DIR"
   VBOX_FILENAME="nopsys.vmdk"
 else
-  cp ../../../nopsys/build/nopsys.iso $BUNDLES_DIR/
+  cp "$BUILD_DIR/nopsys.iso" "$BUNDLES_DIR"
   #cp ../../../nopsys/build/vmware.cd.vmx $BUNDLES_DIR/
   VBOX_FILENAME="nopsys.iso"
 fi
 
-cp ../run.sh .
+cp "$RELEASE_SCRIPTS_DIR/run.sh" .
 sed -i.bak "s/RELEASE=release/RELEASE=$RELEASE/g" run.sh
 sed -i.bak "s/VBOX_FILENAME/$BUNDLES_DIR\/$VBOX_FILENAME/g" run.sh
 rm run.sh.bak
 
-mkdir $SCRIPTS_DIR
-pushd $SCRIPTS_DIR
-cp ../../../../nopsys/scripts/virtualbox.sh .
+mkdir "scripts"
+pushd "scripts"
+cp "$NOPSYS_SCRIPTS_DIR/virtualbox.sh" .
 sed -i.bak 's/build\/nopsys.iso/nopsys.iso/' virtualbox.sh 
 rm virtualbox.sh.bak
-popd > /dev/null
-popd > /dev/null
+popd 
+popd 
 
-tar -zcvf CogNOS-$RELEASE-$VERSION.tar.gz $RELEASE_DIR
+tar -zcvf "$SCRIPT_PATH/CogNOS-$RELEASE-$VERSION.tar.gz" "$RELEASE_DIR"
+rm -Rf "$RELEASE_DIR"
 
-rm -Rf $RELEASE_DIR
-
-popd > /dev/null

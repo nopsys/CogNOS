@@ -67,8 +67,37 @@ function check_for() {
   fi
 }
 
-get_web_getter
+pushd () {
+    command pushd "$@" > /dev/null
+}
 
+popd () {
+    command popd "$@" > /dev/null
+}
+
+function checkout() {
+	DIR=$1
+  REPO=$2
+  BRANCH=$3
+  TARGET_DIR=$4
+  INFO "Installing or Updating branch $BRANCH from repository $REPO into $DIR/$TARGET_DIR"
+  if [ ! -d "$DIR" ]
+  then
+    mkdir "$DIR"
+    pushd "$DIR"
+      INFO Cloning git repository from "$REPO"
+      git clone -b "$BRANCH" --depth=1 "$REPO" "$TARGET_DIR"
+      load_submodule    	
+    popd 
+  else
+    WARN $2 was already cloned, Updating
+    pushd "$DIR/$TARGET_DIR"
+      git pull origin "$BRANCH"
+      load_submodule
+    popd > /dev/null
+  fi
+  Ok "Ok setting up $BRANCH"
+}
 
 
 
