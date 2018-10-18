@@ -46,5 +46,5 @@ deploy:
   skip_cleanup: true
   on:
     repo: nopsys/CogNOS
-#    tags: true
+    tags: true
 
