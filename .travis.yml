@@ -29,8 +29,8 @@ before_script:
 sudo: enabled
 
 script:
-  - "./scripts/build.sh"
-  - "./scripts/Releasing/release.sh"
+  - "./scripts/build/build.sh"
+  - "./scripts/releasing/release.sh"
 
 cache:
   ccache: true
