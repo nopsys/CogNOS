@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e 
 #Based on the same file from pharo-vm project
 SCRIPT_PATH="$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )"
 if [ ! -d $SCRIPT_PATH ]; then
@@ -7,13 +7,14 @@ if [ ! -d $SCRIPT_PATH ]; then
     echo "Maybe accessed with symlink"
 fi
 
-source $SCRIPT_PATH/basicFunctions.inc
+BASE_DIR="$SCRIPT_PATH/../.."
+
+source "$BASE_DIR/scripts/config.inc"
+source "$SCRIPTS_DIR/basicFunctions.inc"
 
 #Threaded Heartbeat VMs do not work on OSX 
 VM="vm61"
-IMAGE_DIR="$SCRIPT_PATH/../image"
-mkdir -p $IMAGE_DIR
-pushd $IMAGE_DIR
+mkdir -p "$IMAGE_DIR"
 
 if [ ! -f Pharo.image ]
   then

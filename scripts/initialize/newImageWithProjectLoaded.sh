@@ -11,7 +11,7 @@ BASE_DIR="$SCRIPT_PATH/../.."
 source "$BASE_DIR/scripts/config.inc"
 source "$SCRIPTS_DIR/basicFunctions.inc"
 
-$INIT_SCRIPTS_DIR/newImage.sh
+"$INIT_SCRIPTS_DIR/newImage.sh"
 
 pushd $IMAGE_DIR
 

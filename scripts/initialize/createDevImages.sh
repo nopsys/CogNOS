@@ -29,6 +29,6 @@ fi
 if [ ! -f "$IMAGE_DIR/$COGNOS_IMAGE_NAME" ]
 then
     INFO "Downloading Pharo image with SqueakNOS code"
-    bash $INIT_SCRIPTS_DIR/newImageWithProjectLoaded.sh "$ST_IMAGE_INIT_SCRIPTS_DIR/updateIceberg.st" "$ST_IMAGE_INIT_SCRIPTS_DIR/loadSqueakNOSImage.st"
+    bash "$INIT_SCRIPTS_DIR/newImageWithProjectLoaded.sh" "$ST_IMAGE_INIT_SCRIPTS_DIR/updateIceberg.st" "$ST_IMAGE_INIT_SCRIPTS_DIR/loadSqueakNOSImage.st"
     OK "done"
 fi

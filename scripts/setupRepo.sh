@@ -25,6 +25,6 @@ fi
 #Install openlibm into opensmalltalk
 checkout $THIRD_PARTY_DIR $OPEN_LIB_REPO_URL $OPEN_LIB_BRANCH $OPEN_LIB_DIR_NAME
 
-$INIT_SCRIPTS_DIR/initializeOpenSmalltalk.sh
+$INIT_SCRIPTS_DIR/initOpenSmalltalkRepo.sh
 $INIT_SCRIPTS_DIR/createDevImages.sh
 

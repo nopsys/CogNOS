@@ -22,10 +22,9 @@ fi
 if [ -d $RELEASE_DIR ]
 then
   rm -Rf $RELEASE_DIR
-else
-  mkdir $RELEASE_DIR
 fi
-mkdir $BUNDLES_DIR
+
+mkdir -p $BUNDLES_DIR
 
 pushd $RELEASE_DIR
 

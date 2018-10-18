@@ -7,7 +7,7 @@ NOPSYS_DIR="$BASE_DIR/nopsys"
 SCRIPTS_DIR="$BASE_DIR/scripts"
 
 ## Artifact Directories
-THIRD_PARTY_DIR="$OPEN_ST_VM_DIR/third-party/"
+THIRD_PARTY_DIR="$OPEN_ST_VM_DIR/third-party"
 OPENLIBM_DIR="$THIRD_PARTY_DIR/openlibm"
 BUILD_SCRIPTS_DIR="$SCRIPTS_DIR/buildScripts"
 INIT_SCRIPTS_DIR="$SCRIPTS_DIR/initialize"

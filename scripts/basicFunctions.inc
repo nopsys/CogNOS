@@ -81,10 +81,10 @@ function checkout() {
   BRANCH=$3
   TARGET_DIR=$4
   INFO "Installing or Updating branch $BRANCH from repository $REPO into $DIR/$TARGET_DIR"
-  if [ ! -d "$DIR" ]
+  mkdir -p "$DIR"
+  if [[ ! -d "$DIR/$TARGET_DIR" || ! -d "$DIR/$TARGET_DIR/.git" ]] 
   then
-    mkdir "$DIR"
-    pushd "$DIR"
+      pushd "$DIR"
       INFO Cloning git repository from "$REPO"
       git clone -b "$BRANCH" --depth=1 "$REPO" "$TARGET_DIR"
       load_submodule    	
@@ -96,7 +96,7 @@ function checkout() {
       load_submodule
     popd > /dev/null
   fi
-  Ok "Ok setting up $BRANCH"
+  OK "Ok setting up $BRANCH"
 }
 
 
