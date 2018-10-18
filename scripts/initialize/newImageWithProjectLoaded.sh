@@ -19,11 +19,11 @@ INFO "LOADING PROJECT INTO IMAGE"
 SCRIPTS=""
 for var in "$@"
 do
-    SCRIPTS+="../scripts/$var "
+    SCRIPTS+="$var "
 done
 
 ./pharo Pharo.image $SCRIPTS
 
 rm Pharo.image
 rm Pharo.changes
-popd 
+popd

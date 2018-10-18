@@ -12,25 +12,28 @@ BASE_DIR="$SCRIPT_PATH/../.."
 source "$BASE_DIR/scripts/config.inc"
 source "$SCRIPTS_DIR/basicFunctions.inc"
 
+get_web_getter
+
 #Threaded Heartbeat VMs do not work on OSX 
 VM="vm61"
 mkdir -p "$IMAGE_DIR"
 
-if [ ! -f Pharo.image ]
-  then
-  INFO Downloading Stable Pharo image from get.pharo.org
-  $GET get.pharo.org/64/61
-  bash 61
-else
-  INFO Pharo image already present, skipping download
-fi
+pushd "$IMAGE_DIR"
+  if [ ! -f Pharo.image ]
+    then
+    INFO Downloading Stable Pharo image from get.pharo.org
+    $GET get.pharo.org/64/61
+    bash 61
+  else
+    INFO Pharo image already present, skipping download
+  fi
 
-if [ ! -f pharo ]
-  then
-  INFO Downloading Stable Pharo VM from get.pharo.org
-  $GET get.pharo.org/64/$VM
-  bash $VM
-else
-  INFO "VM for Pharo already present, skipping download"
-fi
-popd > /dev/null
+  if [ ! -f pharo ]
+    then
+    INFO Downloading Stable Pharo VM from get.pharo.org
+    $GET get.pharo.org/64/$VM
+    bash $VM
+  else
+    INFO "VM for Pharo already present, skipping download"
+  fi
+popd
