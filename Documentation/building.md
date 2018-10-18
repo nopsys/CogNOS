@@ -44,7 +44,7 @@ This script will download and configure all the needed smalltalk images and a co
 
 #### 4. Build CogNOS:
 
-    bash scripts/build.sh
+    bash scripts/build/build.sh
 
 If you have any problem with the command you can try to do this step manually. The building consists of two steps: 
 
@@ -68,7 +68,7 @@ If asked about overwriting files, just answer yes. You can quit the image withou
 
 To build everything: 
 
-    cd ../opensmalltalk-vm/platforms/nopsys
+    cd opensmalltalk-vm/platforms/nopsys
     make  # builds vm.obj
     
 and to create a bootable media file:
