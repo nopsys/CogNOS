@@ -8,8 +8,15 @@ Author useAuthor: 'LoadSqueakNOS' during: [
 	
     myRepository register.
 	myRepository checkoutBranch: 'master'.
-	(myRepository packageNamed: 'SqueakNOS') load.
-	(myRepository packageNamed: 'Net') load.
+	(myRepository packageNamed: 'STNos-Devices') load.
+	(myRepository packageNamed: 'STNos-ExternalStructs') load.
+	(myRepository packageNamed: 'STNos-Filesystems') load.
+	(myRepository packageNamed: 'STNos-Kernel') load.
+	(myRepository packageNamed: 'STNos-Memory') load.
+	(myRepository packageNamed: 'STNos-Network') load.
+	(myRepository packageNamed: 'STNos-Pharo') load.
+	(myRepository packageNamed: 'STNos-Storage') load.
+	(myRepository packageNamed: 'STNos-Tests') load.
 ].
 
 (Smalltalk saveAs: (Smalltalk imageDirectory asFileReference) / 'CogNos' )
