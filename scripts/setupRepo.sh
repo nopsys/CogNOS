@@ -13,13 +13,15 @@ source "$SCRIPTS_DIR/basicFunctions.inc"
 
 INFO "Initializing submodules"; pushd $BASE_DIR; load_submodule; popd 
 
-INFO "Checking whether a compilation config exists (and creating a default one if not)"
+INFO "Checking whether a compilation config exists"
 if [ ! -f $BASE_DIR/nopsys/compilation.conf ]
 then
     cp -n "$BASE_DIR/nopsys/compilation.conf.example" "$BASE_DIR/nopsys/compilation.conf"
     WARN You should review the compilation configuration file, located at: \
     "$BASE_DIR/nopsys/compilation.conf", to assess that all the required compilations \
     tools exist in your setting and are properly referenced! 
+else
+    OK Done
 fi
 
 #Install openlibm into opensmalltalk

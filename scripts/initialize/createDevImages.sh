@@ -29,12 +29,12 @@ fi
 if [ ! -f "$IMAGE_DIR/$COGNOS_IMAGE_NAME" ]
 then
     INFO "Downloading Pharo image with CogNos code"
-    TO_INSTALL_SCRIPTS="$ST_IMAGE_INIT_SCRIPTS_DIR/updateIceberg.st" \
-         " $ST_IMAGE_INIT_SCRIPTS_DIR/loadSTNos.st"
-    if [ $VERSION = "HD" ]
+    TO_INSTALL_SCRIPTS="$ST_IMAGE_INIT_SCRIPTS_DIR/updateIceberg.st"
+    TO_INSTALL_SCRIPTS+=" $ST_IMAGE_INIT_SCRIPTS_DIR/loadSTNos.st"
+    if [ "$VERSION" == "HD" ]
     then
         TO_INSTALL_SCRIPTS+=" $ST_IMAGE_INIT_SCRIPTS_DIR/addStorageInitializer.st"
     fi
-    bash "$INIT_SCRIPTS_DIR/newImageWithProjectLoaded.sh $TO_INSTALL_SCRIPTS"
+    bash "$INIT_SCRIPTS_DIR/newImageWithProjectLoaded.sh" "$TO_INSTALL_SCRIPTS"
     OK "done"
 fi

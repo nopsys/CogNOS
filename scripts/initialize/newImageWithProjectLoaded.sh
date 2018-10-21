@@ -21,7 +21,7 @@ for var in "$@"
 do
     SCRIPTS+="$var "
 done
-SCRIPTS +="$ST_IMAGE_INIT_SCRIPTS_DIR/saveImage.st"
+SCRIPTS+="$ST_IMAGE_INIT_SCRIPTS_DIR/saveImage.st"
 
 ./pharo Pharo.image $SCRIPTS
 
