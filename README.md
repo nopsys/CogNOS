@@ -68,4 +68,4 @@ Alternatively, you can pick any issue from the CogNOS issues tracker on GitHub. 
 
 ## Papers
 
-- [Self-Contained Development Environments (DLS'18)]()
+- [Self-Contained Development Environments (DLS'18)](https://charig.github.io/assets/papers/SCDE-DLS.pdf)
