@@ -31,7 +31,7 @@ pushd $RELEASE_DIR
 if [[ -z "$VERSION"  ||  "$VERSION" == "HD" ]]
 then
   cp "$BUILD_DIR/nopsys.vmdk" "$BUNDLES_DIR"
-  cp "$BUILD_DIR//vmware.hd.vmx" "$BUNDLES_DIR"
+  cp "$BUILD_DIR/vmware.hd.vmx" "$BUNDLES_DIR"
   VBOX_FILENAME="nopsys.vmdk"
 else
   cp "$BUILD_DIR/nopsys.iso" "$BUNDLES_DIR"
@@ -41,7 +41,7 @@ fi
 
 cp "$RELEASE_SCRIPTS_DIR/run.sh" .
 sed -i.bak "s/RELEASE=release/RELEASE=$RELEASE/g" run.sh
-sed -i.bak "s/VBOX_FILENAME/$BUNDLES_DIR\/$VBOX_FILENAME/g" run.sh
+sed -i.bak "s/VBOX_FILENAME/$BUNDLES_DIR_TO_RELEASE\/$VBOX_FILENAME/g" run.sh
 rm run.sh.bak
 
 mkdir "scripts"
@@ -50,8 +50,9 @@ cp "$NOPSYS_SCRIPTS_DIR/virtualbox.sh" .
 sed -i.bak 's/build\/nopsys.iso/nopsys.iso/' virtualbox.sh 
 rm virtualbox.sh.bak
 popd 
-popd 
 
-tar -zcvf "$SCRIPT_PATH/CogNOS-$RELEASE-$VERSION.tar.gz" "$RELEASE_DIR"
+pushd $RELEASE_DIR
+tar -zcvf "$BASE_DIR/CogNOS-$RELEASE-$VERSION.tar.gz" .
+popd
 rm -Rf "$RELEASE_DIR"
 

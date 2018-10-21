@@ -1,0 +1,1 @@
+(Computer current instVarNamed: #initializers) addLast: StorageInitializer new

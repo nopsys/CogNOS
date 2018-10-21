@@ -1,3 +1,4 @@
 VMMaker/*
 image/*
-scripts/Releasing/CogNOS.tar.gz
+CogNOS*.tar.gz
+*.DS_Store

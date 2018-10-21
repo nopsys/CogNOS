@@ -18,10 +18,3 @@ Author useAuthor: 'LoadSqueakNOS' during: [
 	(myRepository packageNamed: 'STNos-Storage') load.
 	(myRepository packageNamed: 'STNos-Tests') load.
 ].
-
-(Smalltalk saveAs: (Smalltalk imageDirectory asFileReference) / 'CogNos' )
-    ifFalse: [ Smalltalk snapshot: false andQuit: true ].
-
-
-
-
